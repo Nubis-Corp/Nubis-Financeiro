@@ -2,284 +2,360 @@
 <html lang="pt-br">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tela principal | Nubis Financeiro</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela principal | Nubis Financeiro</title>
+    <link rel="stylesheet" href="./../css/style.css">
+    <link rel="stylesheet" href="./../css/tela_principal.css">
 </head>
 
 <body>
 
-<header class="topo">
-    <nav class="navbar">
-        <div class="logo">
-            <img src="./imagens/Nubis.png" alt="Logo da Nubis">
-        </div>
-
-        <ul class="menu">
-            <li><a href="#">Geral</a></li>
-            <li><a href="#">Metas</a></li>
-            <li><a href="#">Simulador</a></li>
-            <li><a href="#">Calculadora</a></li>
-            <li><button class="btn-notificacao"><i></i></button></li>
-            <li><button class="btn-perfil"><img src="" alt="Foto de perfil"></button></li>
-        </ul>
-    </nav>
-</header>
-
-<main class="dashboard">
-
-    <!-- RESUMO FINANCEIRO -->
-    <section class="resumo-financeiro">
-
-        <header class="resumo-header">
-            <h1>Olá, Fulano</h1>
-            <p>Seu resumo financeiro</p>
-        </header>
-
-        <hr>
-
-        <div class="card-resumo entradas">
-            <h3>Entradas do mês</h3>
-            <i class="icon-info"></i>
-
-            <ul class="lista-resumo">
-                <li>Salário - R$2000</li>
-                <li>Freelancer - R$1000</li>
-                <li class="total">Total - R$3000</li>
-            </ul>
-        </div>
-
-        <hr>
-
-        <div class="card-resumo saidas">
-            <h3>Saídas do mês</h3>
-
-            <ul class="lista-resumo">
-                <li class="total">Total - R$1225.5</li>
-            </ul>
-        </div>
-
-        <hr>
-
-        <div class="card-resumo saldo">
-            <h3>Seu saldo agora</h3>
-
-            <ul class="lista-resumo">
-                <li>Disponível - R$1774.5</li>
-            </ul>
-
-            <div class="barra-saldo">
-                <div class="progresso-saldo"></div>
+    <header class="topo">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./../imagens/Nubis.png" alt="Logo da Nubis">
             </div>
 
-            <div class="legenda-saldo">
-                <span>Saldo</span>
-                <span>Gasto</span>
-            </div>
-        </div>
-
-        <hr>
-
-        <div class="card-resumo pendentes">
-            <h3>Contas pendentes</h3>
-
-            <ul class="lista-resumo">
-                <li>Total - 5</li>
+            <ul class="menu">
+                <li><a href="#">Geral</a></li>
+                <li><a href="#">Metas</a></li>
+                <li><a href="#">Simulador</a></li>
+                <li><a href="#">Calculadora</a></li>
+                <li><button class="btn-notificacao"><i></i></button></li>
+                <li><button class="btn-perfil"><img src="" alt="Foto de perfil"></button></li>
             </ul>
-        </div>
+        </nav>
+    </header>
 
-        <hr>
+    <main class="dashboard">
 
-    </section>
+        <!-- RESUMO FINANCEIRO -->
+        <section class="resumo-financeiro">
 
+            <header class="resumo-header">
+                <h1>Olá, Fulano</h1>
+                <p>Seu resumo financeiro</p>
+            </header>
 
-    <!-- GASTOS -->
-    <section class="gastos-mes">
+            <hr>
 
-        <h2 class="titulo-secao">Seus gastos do mês</h2>
+            <div class="card-resumo entradas">
+                <h3>Entradas do mês</h3>
+                <i class="icon-info"></i>
 
-        <hr>
-
-        <div class="grid-gastos-principais">
-
-            <article class="card-gasto categoria">
-                <header class="card-header">
-                    <h3>Contas fixas</h3>
-                    <i class="icon-info"></i>
-                </header>
-
-                <ul class="lista-gastos">
-
-                    <li class="item-gasto">
-                        <label for="aluguel">
-                            <input type="checkbox" name="aluguel" id="aluguel">
-                            <span>Aluguel</span>
-                        </label>
-                        <span class="valor negativo">-R$1000</span>
-                        <button class="btn-opcao"></button>
+                <ul class="lista-resumo">
+                    <li>
+                        <span>Salário</span>
+                        <span>R$ 2000</span>
                     </li>
-
-                    <li class="item-gasto">
-                        <label for="internet">
-                            <input type="checkbox" name="internet" id="internet">
-                            <span>Internet</span>
-                        </label>
-                        <span class="valor">R$100</span>
-                        <button class="btn-opcao"></button>
+                    <li>
+                        <span>Freelancer</span>
+                        <span>R$ 1000</span>
                     </li>
+                    <li class="total">
+                        <span>Total</span>
+                        <span>R$ 3000</span>
+                    </li>
+                </ul>
+            </div>
 
+
+            <div class="card-resumo saidas">
+                <h3>Saídas do mês</h3>
+
+                <ul class="lista-resumo">
+                    <li class="total">
+                        <span>Total</span>
+                        <span>R$1225.5</span>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="card-resumo saldo">
+                <h3>Seu saldo agora</h3>
+
+                <ul class="lista-resumo">
+                    <li>
+                        <span>Disponível</span>
+                        <span>R$1774.5</span>
+                    </li>
                 </ul>
 
-                <button class="btn-adicionar">
-                    <i></i> Nova conta fixa
-                </button>
+                <div class="barra-saldo">
+                    <div class="progresso-saldo"></div>
+                </div>
 
-            </article>
+                <div class="legenda-saldo">
+                    <span>Saldo</span>
+                    <span>Gasto</span>
+                </div>
+            </div>
 
 
-            <article class="card-gasto categoria">
-                <header class="card-header">
-                    <h3>Contas variáveis</h3>
-                    <i class="icon-info"></i>
+            <div class="card-resumo pendentes">
+                <h3>Contas pendentes</h3>
+
+                <ul class="lista-resumo">
+                    <li>
+                        <span>Total</span>
+                        <span>5</span>
+                    </li>
+                </ul>
+            </div>
+
+
+        </section>
+
+
+        <!-- GASTOS -->
+        <section class="gastos-mes">
+
+            <h2 class="titulo-secao">Seus gastos do mês</h2>
+
+            <hr>
+
+            <div class="grid-gastos-principais">
+
+                <article class="card-gasto categoria">
+                    <header class="card-header">
+                        <h3>Contas fixas</h3>
+                        <i class="icon-info"></i>
+                    </header>
+
+                    <ul class="lista-gastos">
+
+                        <li class="item-gasto">
+                            <label for="aluguel">
+                                <input type="checkbox" name="aluguel" id="aluguel">
+                                <span>Aluguel</span>
+                            </label>
+                            <span class="valor negativo">-R$1000</span>
+                            <button class="btn-opcao"></button>
+                        </li>
+
+                        <li class="item-gasto">
+                            <label for="internet">
+                                <input type="checkbox" name="internet" id="internet">
+                                <span>Internet</span>
+                            </label>
+                            <span class="valor">R$100</span>
+                            <button class="btn-opcao"></button>
+                        </li>
+
+                    </ul>
+
+                    <button class="btn-adicionar">
+                        <i></i> Nova conta fixa
+                    </button>
+
+                </article>
+
+
+                <article class="card-gasto categoria">
+                    <header class="card-header">
+                        <h3>Contas variáveis</h3>
+                        <i class="icon-info"></i>
+                    </header>
+
+                    <ul class="lista-gastos">
+                        <!-- itens -->
+                    </ul>
+
+                    <button class="btn-adicionar">
+                        <i></i> Nova conta variável
+                    </button>
+
+                </article>
+
+            </div>
+
+
+            <div class="grid-categorias">
+
+                <article class="card-gasto categoria">
+                    <header class="card-header">
+                        <h3>Alimentação</h3>
+                        <i></i>
+                    </header>
+                </article>
+
+                <article class="card-gasto categoria">
+                    <header class="card-header">
+                        <h3>Lazer</h3>
+                        <i></i>
+                    </header>
+                </article>
+
+                <article class="card-gasto categoria">
+                    <header class="card-header">
+                        <h3>Transporte</h3>
+                        <i></i>
+                    </header>
+                </article>
+
+                <article class="card-gasto categoria">
+                    <header class="card-header">
+                        <h3>Compras</h3>
+                        <i></i>
+                    </header>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- CARTÕES -->
+        <section class="cartoes">
+
+            <header class="secao-header">
+                <h2>Organização de cartões</h2>
+                <i class="icon-info"></i>
+            </header>
+
+            <hr>
+
+            <article class="card-cartao">
+
+                <header class="cartao-header">
+                    <h3>Cartão Nubank</h3>
+                    <i></i>
                 </header>
 
-                <ul class="lista-gastos">
-                    <!-- itens -->
+                <ul class="info-cartao">
+                    <li>
+                        <span>Limite</span>
+                        <span>R$2000</span>
+                    </li>
+                    <li>
+                        <span>Usado</span>
+                        <span>R$1000</span>
+                    </li>
                 </ul>
 
-                <button class="btn-adicionar">
-                    <i></i> Nova conta variável
+            </article>
+
+
+            <article class="card-cartao">
+                <header class="cartao-header">
+                    <h3>Cartão Inter</h3>
+                    <i></i>
+                </header>
+
+                <ul class="info-cartao">
+                    <li>
+                        <span>Limite</span>
+                        <span>R$2000</span>
+                    </li>
+                    <li>
+                        <span>Usado</span>
+                        <span>R$225.5</span>
+                    </li>
+                </ul>
+            </article>
+
+
+            <article class="novo-cartao">
+                <button class="btn-novo-cartao">
+                    <i></i>
+                    Novo
                 </button>
-
             </article>
 
-        </div>
+        </section>
 
 
-        <div class="grid-categorias">
+        <!-- ANÁLISE -->
+        <section class="analise-financeira">
 
-            <article class="card-gasto categoria">
-                <header class="card-header">
-                    <h3>Alimentação</h3>
-                    <i></i>
-                </header>
-            </article>
-
-            <article class="card-gasto categoria">
-                <header class="card-header">
-                    <h3>Lazer</h3>
-                    <i></i>
-                </header>
-            </article>
-
-            <article class="card-gasto categoria">
-                <header class="card-header">
-                    <h3>Transporte</h3>
-                    <i></i>
-                </header>
-            </article>
-
-            <article class="card-gasto categoria">
-                <header class="card-header">
-                    <h3>Compras</h3>
-                    <i></i>
-                </header>
-            </article>
-
-        </div>
-
-    </section>
-
-
-    <!-- CARTÕES -->
-    <section class="cartoes">
-
-        <header class="secao-header">
-            <h2>Organização de cartões</h2>
-            <i class="icon-info"></i>
-        </header>
-
-        <hr>
-
-        <article class="card-cartao">
-
-            <header class="cartao-header">
-                <h3>Cartão Nubank</h3>
+            <header class="secao-header">
+                <h2>Análise financeira</h2>
                 <i></i>
             </header>
 
-            <ul class="info-cartao">
-                <li>
-                    <span>Limite</span>
-                    <span>R$2000</span>
-                </li>
-                <li>
-                    <span>Usado</span>
-                    <span>R$1000</span>
-                </li>
-            </ul>
+            <hr>
 
-        </article>
+            <article class="card-grafico">
 
+                <h3>Gastos por categoria</h3>
 
-        <article class="card-cartao">
-            <header class="cartao-header">
-                <h3>Cartão Inter</h3>
-                <i></i>
-            </header>
+                <canvas id="grafico-categorias"></canvas>
 
-            <ul class="info-cartao">
-                <li>
-                    <span>Limite</span>
-                    <span>R$2000</span>
-                </li>
-                <li>
-                    <span>Usado</span>
-                    <span>R$225.5</span>
-                </li>
-            </ul>
-        </article>
+            </article>
 
+            <article class="card-grafico">
 
-        <article class="novo-cartao">
-            <button class="btn-novo-cartao">
-                <i></i>
-                Novo
-            </button>
-        </article>
+                <h3>Evolução financeira dos últimos meses</h3>
 
-    </section>
+                <canvas id="grafico-meses"></canvas>
 
+            </article>
 
-    <!-- ANÁLISE -->
-    <section class="analise-financeira">
+        </section>
 
-        <header class="secao-header">
-            <h2>Análise financeira</h2>
-            <i></i>
-        </header>
+    </main>
 
-        <hr>
+    <footer class="dashboard-footer">
 
-        <article class="card-grafico">
+        <div class="dashboard-footer-container dashboard-container">
 
-            <h3>Gastos por categoria</h3>
+            <div class="dashboard-footer-marca">
+                <img src="" alt="Logo">
+                <h4>© 2026 Nubis™ - Versão 1.0. Todos os direitos reservados.</h4>
+            </div>
 
-            <canvas id="grafico-categorias"></canvas>
+            <div class="dashboard-footer-coluna">
 
-        </article>
+                <h3>Explorar</h3>
 
-        <article class="card-grafico">
+                <ul>
+                    <li><a href="">Saiba mais</a></li>
+                    <li><a href="">Planos</a></li>
+                    <li><a href="">FAQ</a></li>
+                </ul>
 
-            <h3>Evolução financeira dos últimos meses</h3>
+            </div>
 
-            <canvas id="grafico-meses"></canvas>
+            <div class="dashboard-footer-coluna">
 
-        </article>
+                <h3>Contato</h3>
 
-    </section>
+                <ul>
+                    <li><i></i> nubis@gmail.com</li>
+                </ul>
 
-</main>
+            </div>
+
+            <div class="dashboard-footer-coluna">
+
+                <h3>Redes sociais</h3>
+
+                <ul>
+                    <li><a href="#"><i></i>@nubisfinanceiro</a></li>
+                    <li><a href="#"><i></i>@nubisfinanceiro</a></li>
+                    <li><a href="#"><i></i>Nubis Financeiro</a></li>
+                </ul>
+
+            </div>
+
+            <div class="dashboard-footer-coluna">
+
+                <h3>Legal</h3>
+
+                <ul>
+                    <li><a href="#">Política de privacidade</a></li>
+                    <li><a href="#">Termos de uso</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </footer>
+
 
 </body>
+
 </html>

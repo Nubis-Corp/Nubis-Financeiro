@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador</title>
+</head>
+<body>
+    <header class="topo">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./../imagens/Nubis.png" alt="Logo da Nubis">
+            </div>
+
+            <ul class="menu">
+                <li class="menu-item"><a href="#">Geral</a></li>
+                <li class="menu-item"><a href="#">Metas</a></li>
+                <li class="menu-item"><a href="#">Simulador</a></li>
+                <li class="menu-item"><a href="#">Calculadora</a></li>
+                <li class="menu-item"><button class="btn-notificacao"><i class="icone-notificacao"></i></button></li>
+                <li class="menu-item"><button class="btn-perfil"><img src="" alt="Foto de perfil"></button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Simule um investimento</h2>
+        <div>
+            <article>
+                <h3>Investimento inicial</h3>
+                <label>
+                <input type="text" name="investimentoInicial" id="investimentoInicial" placeholder="R$ 0,00">
+                </label>
+            </article>
+            <article>
+                <h3>Aportes mensais</h3>
+                <label>
+                <input type="text" name="aportesMensais" id="aportesMensais" placeholder="R$ 0,00">
+                </label>
+            </article>
+            <article>
+                <h3>Período de aplicação</h3>
+                <input type="number" name="periodoAplicacao" id="periodoAplicacao">
+                <button><i></i></button>
+                <button><i></i></button>
+                <select name="tipoPeriodoAplicacao" id="tipoPeriodoAplicacao">
+                    <option value="dias">Dias</option>
+                    <option value="semanas">Semanas</option>
+                    <option value="meses">Meses</option>
+                    <option value="anos">Anos</option>
+                </select>
+            </article>
+        </div>
+    </section>
+</body>
+</html>
