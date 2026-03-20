@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações</title>
+</head>
+
+<body>
+
+    <!-- HEADER GLOBAL -->
+    <header class="cabecalho">
+        <nav class="barra-navegacao">
+            <div class="logo">
+                <img src="./../imagens/Nubis.png" alt="Logo da Nubis" class="imagem-logo">
+            </div>
+
+            <ul class="menu">
+                <li class="item-menu"><a href="#" class="link-menu">Geral</a></li>
+                <li class="item-menu"><a href="#" class="link-menu">Metas</a></li>
+                <li class="item-menu"><a href="#" class="link-menu">Simulador</a></li>
+                <li class="item-menu"><a href="#" class="link-menu">Calculadora</a></li>
+                <li class="item-menu">
+                    <button class="botao-notificacao" aria-label="Notificações"></button>
+                </li>
+                <li class="item-menu">
+                    <button class="botao-perfil" aria-label="Perfil do usuário">
+                        <img src="" alt="Foto de perfil" class="imagem-perfil">
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="pagina-configuracoes">
+
+        <!-- MENU LATERAL -->
+        <aside class="menu-lateral">
+            <nav aria-label="Menu de configurações">
+                <ul class="lista-menu-lateral">
+
+                    <li class="item-menu-lateral">
+                        <button class="botao-menu-lateral ativo" data-secao="informacoes">
+                            Informações pessoais
+                        </button>
+                    </li>
+
+                    <li class="item-menu-lateral">
+                        <button class="botao-menu-lateral" data-secao="preferencias">
+                            Preferências
+                        </button>
+                    </li>
+
+                    <li class="item-menu-lateral">
+                        <button class="botao-menu-lateral" data-secao="assinatura">
+                            Assinatura
+                        </button>
+                    </li>
+
+                    <li class="item-menu-lateral">
+                        <button class="botao-menu-lateral" data-secao="privacidade">
+                            Privacidade e segurança
+                        </button>
+                    </li>
+
+                    <li class="item-menu-lateral">
+                        <button class="botao-menu-lateral" data-secao="ajuda">
+                            Ajuda
+                        </button>
+                    </li>
+
+                    <li class="item-menu-lateral">
+                        <button class="botao-menu-lateral" data-secao="logout">
+                            Sair da conta
+                        </button>
+                    </li>
+
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- ÁREA DINÂMICA -->
+        <section class="conteudo-configuracoes" aria-live="polite">
+
+            <!-- Cabeçalho da seção -->
+            <header class="cabecalho-conteudo">
+                <h1 class="titulo-pagina">Informações pessoais</h1>
+            </header>
+
+            <!-- Conteúdo será inserido via JS -->
+            <div id="conteudo-dinamico" class="conteudo-dinamico">
+                <!-- JS injeta aqui -->
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
