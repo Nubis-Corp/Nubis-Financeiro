@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nubis Financeiro</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 
 <body>
@@ -14,18 +15,21 @@
         <nav class="navbar container">
 
             <div class="logo">
-                <img src="./imagens/Nubis.png" alt="Logo">
+                <img src="./imagens/logoNubis2.png" alt="Logo">
             </div>
 
-            <ul class="nav-menu">
-                <li><a href="index.html">Sobre nós</a></li>
-                <li><a href="planos.html">Planos</a></li>
-            </ul>
+            <div class="navbar-opcoes">
+                <ul class="nav-menu">
+                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="./paginas/planos.html">Planos</a></li>
+                </ul>
 
-            <button class="btn-login">
-                Entrar
-            </button>
-
+                <a href="./paginas/login.html">
+                    <button class="btn-login">
+                        Entrar
+                    </button>
+                </a>
+            </div>
         </nav>
     </header>
 
@@ -34,36 +38,36 @@
         <section class="hero">
             <div class="hero-container container">
 
-                <div class="hero-estrelas">
-                    <i></i><i></i><i></i><i></i>
-                </div>
+                <div class="hero-conteudo-wrapper">
+                    <div class="hero-estrelas">
+                        <img src="./icones/Star 1.svg">
+                        <img src="./icones/Star 2.svg">
+                        <img src="./icones/Star 1.svg">
+                        <img src="./icones/Star 2.svg">
+                    </div>
 
-                <div class="hero-conteudo">
-                    <h1 class="hero-titulo">
-                        Sua liberdade financeira começa com <span>organização.</span>
-                    </h1>
+                    <div class="hero-conteudo">
+                        <h1 class="hero-titulo">
+                            Sua liberdade financeira começa com <span>organização.</span>
+                        </h1>
 
-                    <p class="hero-texto">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </p>
+                        <p class="hero-texto">
+                            Quando você entende para onde seu dinheiro está indo, fica muito mais fácil tomar decisões conscientes, controlar seus gastos e planejar o futuro. Com as ferramentas certas, organizar suas finanças deixa de ser complicado e passa a ser o primeiro passo para conquistar mais tranquilidade e segurança financeira.
+                        </p>
 
-                    <button class="btn-principal">
-                        Experimente
-                    </button>
+                        <a href="./paginas/login.html">
+                            <button class="btn-principal">
+                                Experimente
+                            </button>
+                        </a>
+                    </div>
                 </div>
 
                 <figure class="hero-imagem">
-                    <img src="./imagens/mulher-estudando.jpg" alt="Imagem do hero">
+                    <img src="./imagens/Group 19.png" alt="Imagem do hero">
                 </figure>
 
             </div>
-        </section>
-
-
-        </div>
-
-        </div>
-
         </section>
 
         <section class="funcoes">
@@ -76,13 +80,14 @@
                     </h2>
 
                     <p class="secao-texto">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Tenha mais clareza sobre sua renda e seus objetivos, utilizando ferramentas simples que
+                        facilitam o planejamento do seu dinheiro.
                     </p>
 
                     <ul class="funcoes-lista">
-                        <li><i></i>Lorem ipsum dolor sit amet.</li>
-                        <li><i></i>Lorem ipsum dolor sit amet.</li>
-                        <li><i></i>Lorem ipsum dolor sit amet.</li>
+                        <li><i class="fa-solid fa-check"></i>Visualize suas finanças</li>
+                        <li><i class="fa-solid fa-check"></i>Planeje seus objetivos</li>
+                        <li><i class="fa-solid fa-check"></i>Tome decisões mais inteligentes</li>
                     </ul>
 
                 </div>
@@ -90,27 +95,31 @@
                 <div class="funcoes-grid">
 
                     <article class="funcoes-card">
-                        <i></i>
+                        <i class="fa-solid fa-house"></i>
                         <h3>Crie seu projeto de vida</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <p>Defina metas financeiras que representem seus objetivos pessoais e acompanhe, de forma clara,
+                            o progresso do que você já conquistou e do que ainda deseja alcançar.</p>
                     </article>
 
                     <article class="funcoes-card">
-                        <i></i>
+                        <i class="fa-solid fa-money-bill"></i>
                         <h3>Gerencie suas despesas</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <p>Registre suas contas fixas, variáveis e gastos do dia a dia para ter uma visão completa de
+                            como seu dinheiro está sendo utilizado ao longo do mês.</p>
                     </article>
 
                     <article class="funcoes-card">
-                        <i></i>
+                        <i class="fa-jelly-fill fa-regular fa-chart-bar"></i>
                         <h3>Simulador de investimentos</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <p>Registre suas contas fixas, variáveis e gastos do dia a dia para ter uma visão completa de
+                            como seu dinheiro está sendo utilizado ao longo do mês.</p>
                     </article>
 
                     <article class="funcoes-card">
-                        <i></i>
+                        <i class="fa-solid fa-hand-back-fist"></i>
                         <h3>Aprenda a economizar</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <p>Utilize métodos de organização financeira e ferramentas de planejamento para dividir sua
+                            renda de forma equilibrada e desenvolver hábitos mais conscientes com o dinheiro.</p>
                     </article>
 
                 </div>
@@ -126,7 +135,7 @@
                 <header class="secao-header">
 
                     <h2 class="secao-titulo">
-                        Compromisso que gera impacto
+                        Compromisso que gera <span class="destaque">impacto</span>
                     </h2>
 
                     <h3 class="secao-subtitulo">
@@ -138,18 +147,25 @@
                 <div class="empresa-grid">
 
                     <article class="empresa-card">
+                        <div class="circulo-decorativo"></div>
                         <h4>Missão</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <p>Ajudar pessoas a desenvolver uma relação mais consciente e organizada com o dinheiro,
+                            oferecendo ferramentas que facilitam o planejamento financeiro no dia a dia.</p>
                     </article>
 
                     <article class="empresa-card">
+                        <div class="circulo-decorativo"></div>
                         <h4>Visão</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <p>Ser uma plataforma de referência em organização financeira pessoal, contribuindo para que
+                            cada vez mais pessoas tenham acesso a ferramentas e métodos que ajudem no controle do
+                            dinheiro e no planejamento do futuro.</p>
                     </article>
 
                     <article class="empresa-card">
+                        <div class="circulo-decorativo"></div>
                         <h4>Valores</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <p>A plataforma valoriza a simplicidade e a transparência, buscando tornar a organização
+                            financeira mais fácil de entender e aplicar no dia a dia.</p>
                     </article>
 
                 </div>
@@ -168,7 +184,7 @@
                     <div class="sobre-intro">
 
                         <h2 class="secao-titulo">
-                            Por trás da ideia
+                            Por <span class="destaque">trás</span> da ideia
                         </h2>
 
                         <p class="secao-texto">
@@ -203,7 +219,7 @@
                 </div>
 
                 <figure class="sobre-imagem">
-                    <img src="" alt="Foto da seção sobre">
+                    <img src="./imagens/profissional-seguranca.jpg" alt="Foto da seção sobre">
                 </figure>
 
             </div>
@@ -234,7 +250,7 @@
         <div class="footer-container container">
 
             <div class="footer-marca">
-                <img src="" alt="Logo">
+                <img src="./imagens/Nubis.png" alt="Logo">
                 <h4>© 2026 Nubis™. Todos os direitos reservados.</h4>
             </div>
 
@@ -243,9 +259,9 @@
                 <h3>Explorar</h3>
 
                 <ul>
-                    <li><a href="">Saiba mais</a></li>
-                    <li><a href="">Planos</a></li>
-                    <li><a href="">Login</a></li>
+                    <li><a href="#">Saiba mais</a></li>
+                    <li><a href="./paginas/planos.html">Planos</a></li>
+                    <li><a href="./paginas/login.html">Login</a></li>
                 </ul>
 
             </div>

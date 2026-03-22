@@ -6,25 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela principal | Nubis Financeiro</title>
     <link rel="stylesheet" href="./../css/style.css">
+    <link rel="stylesheet" href="./../css/header.css">
     <link rel="stylesheet" href="./../css/tela_principal.css">
+<<<<<<< Updated upstream
 
+=======
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+>>>>>>> Stashed changes
 </head>
 
 <body>
 
-    <header class="topo">
-        <nav class="navbar">
+    <header class="header">
+        <nav class="navbar container">
             <div class="logo">
                 <img src="./../imagens/Nubis.png" alt="Logo da Nubis">
             </div>
 
-            <ul class="menu">
+            <ul class="nav-menu">
                 <li><a href="#">Geral</a></li>
+<<<<<<< Updated upstream
                 <li><a href="#">Metas</a></li>
                 <li><a href="#">Simulador</a></li>
                 <li><a href="#">Calculadora</a></li>
                 <li><button class="btn-notificacao"><i></i></button></li>
                 <li><button class="btn-perfil"><img src="/imagens/Ellipse 12 .png" alt="Foto de perfil"></button></li>
+=======
+                <li><a href="./metas.html">Metas</a></li>
+                <li><a href="./simulador.html">Simulador</a></li>
+                <li><a href="./planejador.html">Calculadora</a></li>
+                <li><button class="btn-notificacao"><i class="fa-solid fa-bell"></i></button></li>
+                <li><button class="btn-perfil"><img src="./../imagens/mulher-estudando.jpg" alt="Foto de perfil"></button></li>
+>>>>>>> Stashed changes
             </ul>
         </nav>
     </header>
@@ -39,11 +52,11 @@
                 <p>Seu resumo financeiro</p>
             </header>
 
-            <hr>
-
             <div class="card-resumo entradas">
+                <header class="card-header">
                 <h3>Entradas do mês</h3>
-                <i class="icon-info"></i>
+                <i class="fa-solid fa-pencil"></i>
+                </header>
 
                 <ul class="lista-resumo">
                     <li>
@@ -122,7 +135,7 @@
                 <article class="card-gasto categoria">
                     <header class="card-header">
                         <h3>Contas fixas</h3>
-                        <i class="icon-info"></i>
+                        <span>i</span>
                     </header>
 
                     <ul class="lista-gastos">
@@ -133,7 +146,7 @@
                                 <span>Aluguel</span>
                             </label>
                             <span class="valor negativo">-R$1000</span>
-                            <button class="btn-opcao"></button>
+                            <button class="btn-opcao"><i class="fa-solid fa-angle-down"></i></button>
                         </li>
 
                         <li class="item-gasto">
@@ -142,13 +155,24 @@
                                 <span>Internet</span>
                             </label>
                             <span class="valor">R$100</span>
-                            <button class="btn-opcao"></button>
+                            <button class="btn-opcao"><i class="fa-solid fa-angle-down"></i></button>
                         </li>
+
+                        <li class="item-gasto">
+                            <label for="academia">
+                                <input type="checkbox" name="academia" id="academia">
+                                <span>Academia</span>
+                            </label>
+                            <span class="valor">R$100</span>
+                            <button class="btn-opcao"><i class="fa-solid fa-angle-down"></i></button>
+                        </li>
+
+
 
                     </ul>
 
                     <button class="btn-adicionar">
-                        <i></i> Nova conta fixa
+                        <i class="fa-solid fa-plus"></i>Nova conta fixa
                     </button>
 
                 </article>
@@ -157,15 +181,48 @@
                 <article class="card-gasto categoria">
                     <header class="card-header">
                         <h3>Contas variáveis</h3>
-                        <i class="icon-info"></i>
+                        <span>i</span>
                     </header>
 
                     <ul class="lista-gastos">
-                        <!-- itens -->
+
+                        <li class="item-gasto">
+                            <label for="tenis">
+                                <input type="checkbox" name="tenis" id="tenis">
+                                <span>Tênis</span>
+                            </label>
+                            <span class="valor negativo">-R$80</span>
+                            <button class="btn-opcao">
+                                <i class="fa-solid fa-angle-down"></i>
+                            </button>
+                        </li>
+
+                        <li class="item-gasto">
+                            <label for="celular">
+                                <input type="checkbox" name="celular" id="celular">
+                                <span>Celular</span>
+                            </label>
+                            <span class="valor negativo">-R$300</span>
+                            <button class="btn-opcao">
+                                <i class="fa-solid fa-angle-down"></i>
+                            </button>
+                        </li>
+
+                        <li class="item-gasto">
+                            <label for="escrivaninha">
+                                <input type="checkbox" name="escrivaninha" id="escrivaninha">
+                                <span>Escrivaninha</span>
+                            </label>
+                            <span class="valor negativo">-R$100</span>
+                            <button class="btn-opcao">
+                                <i class="fa-solid fa-angle-down"></i>
+                            </button>
+                        </li>
+
                     </ul>
 
                     <button class="btn-adicionar">
-                        <i></i> Nova conta variável
+                        <i class="fa-solid fa-plus"></i> Nova conta variável
                     </button>
 
                 </article>
@@ -178,29 +235,125 @@
                 <article class="card-gasto categoria">
                     <header class="card-header">
                         <h3>Alimentação</h3>
-                        <i></i>
+                        <span>i</span>
                     </header>
+
+                    <ul class="lista-gastos">
+
+                        <li class="item-gasto">
+                            <span>Feira</span>
+                            <span class="valor negativo">-R$100</span>
+                            <button class="btn-opcao">
+                                <i class="fa-solid fa-angle-down"></i>
+                            </button>
+                        </li>
+
+                        <li class="item-gasto">
+                            <span>iFood</span>
+                            <span class="valor negativo">-R$30</span>
+                            <button class="btn-opcao">
+                                <i class="fa-solid fa-angle-down"></i>
+                            </button>
+                        </li>
+
+                        <li class="item-gasto">
+                            <span>iFood</span>
+                            <span class="valor">R$30</span>
+                            <button class="btn-opcao">
+                                <i class="fa-solid fa-angle-down"></i>
+                            </button>
+                        </li>
+
+                    </ul>
+
+                    <button class="btn-adicionar">
+                        <i class="fa-solid fa-plus"></i> Novo gasto
+                    </button>
                 </article>
 
                 <article class="card-gasto categoria">
                     <header class="card-header">
                         <h3>Lazer</h3>
-                        <i></i>
+                        <span>i</span>
                     </header>
+
+                    <ul class="lista-gastos">
+
+                        <li class="item-gasto">
+                            <span>Cinema</span>
+                            <span class="valor negativo">-R$60</span>
+                            <button class="btn-opcao">
+                                <i class="fa-solid fa-angle-down"></i>
+                            </button>
+                        </li>
+
+                        <li class="item-gasto">
+                            <span>Museu</span>
+                            <span class="valor negativo">-R$15</span>
+                            <button class="btn-opcao">
+                                <i class="fa-solid fa-angle-down"></i>
+                            </button>
+                        </li>
+
+                    </ul>
+
+                    <button class="btn-adicionar">
+                        <i class="fa-solid fa-plus"></i> Novo gasto
+                    </button>
                 </article>
 
                 <article class="card-gasto categoria">
                     <header class="card-header">
                         <h3>Transporte</h3>
-                        <i></i>
+                        <span>i</span>
                     </header>
+
+                    <ul class="lista-gastos">
+
+                        <li class="item-gasto">
+                            <span>Uber</span>
+                            <span class="valor negativo">-R$15</span>
+                            <button class="btn-opcao">
+                                <i class="fa-solid fa-angle-down"></i>
+                            </button>
+                        </li>
+
+                        <li class="item-gasto">
+                            <span>Metrô</span>
+                            <span class="valor negativo">-R$5,5</span>
+                            <button class="btn-opcao">
+                                <i class="fa-solid fa-angle-down"></i>
+                            </button>
+                        </li>
+
+                    </ul>
+
+                    <button class="btn-adicionar">
+                        <i class="fa-solid fa-plus"></i> Novo gasto
+                    </button>
                 </article>
 
                 <article class="card-gasto categoria">
                     <header class="card-header">
                         <h3>Compras</h3>
-                        <i></i>
+                        <span>i</span>
                     </header>
+
+                    <ul class="lista-gastos">
+
+                        <li class="item-gasto">
+                            <span>Riachuelo</span>
+                            <span class="valor negativo">-R$50</span>
+                            <button class="btn-opcao">
+                                <i class="fa-solid fa-angle-down"></i>
+                            </button>
+                        </li>
+
+                    </ul>
+
+                    <button class="btn-adicionar">
+                        <i class="fa-solid fa-plus"></i> Novo gasto
+                    </button>
                 </article>
 
             </div>
@@ -213,7 +366,7 @@
 
             <header class="secao-header">
                 <h2>Organização de cartões</h2>
-                <i class="icon-info"></i>
+                <span>i</span>
             </header>
 
             <hr>

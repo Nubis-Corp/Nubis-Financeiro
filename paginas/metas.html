@@ -6,23 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metas | Nubis Financeiro</title>
     <link rel="stylesheet" href="./../css/style.css">
+    <link rel="stylesheet" href="./../css/header.css">
     <link rel="stylesheet" href="./../css/metas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 
 <body>
-    <header class="topo">
-        <nav class="navbar">
+    <header class="header">
+        <nav class="navbar container">
             <div class="logo">
                 <img src="./../imagens/Nubis.png" alt="Logo da Nubis">
             </div>
 
-            <ul class="menu">
-                <li class="menu-item"><a href="#">Geral</a></li>
-                <li class="menu-item"><a href="#">Metas</a></li>
-                <li class="menu-item"><a href="#">Simulador</a></li>
-                <li class="menu-item"><a href="#">Calculadora</a></li>
-                <li class="menu-item"><button class="btn-notificacao"><i class="icone-notificacao"></i></button></li>
-                <li class="menu-item"><button class="btn-perfil"><img src="" alt="Foto de perfil"></button></li>
+            <ul class="nav-menu">
+                <li><a href="./tela_principal.html">Geral</a></li>
+                <li><a href="#">Metas</a></li>
+                <li><a href="./simulador.html">Simulador</a></li>
+                <li><a href="./planejador.html">Calculadora</a></li>
+                <li><button class="btn-notificacao"><i class="fa-solid fa-bell"></i></button></li>
+                <li><button class="btn-perfil"><img src="./../imagens/mulher-estudando.jpg"
+                            alt="Foto de perfil"></button></li>
             </ul>
         </nav>
     </header>
@@ -58,168 +61,180 @@
         <section class="metas-secundarias">
             <h2 class="secao-titulo">Metas de médio prazo</h2>
 
-            <article class="meta-card">
+            <div>
+                <article class="meta-card">
 
-                <h3 class="meta-titulo">Viagem para o Japão</h3>
+                    <h3 class="meta-titulo">Viagem para o Japão</h3>
 
-                <div class="meta-info-topo">
-                    <div class="meta-info">
-                        <span class="meta-label">Meta</span>
-                        <span class="meta-valor">R$10.000</span>
+                    <div class="meta-info-topo">
+                        <div class="meta-info">
+                            <span class="meta-label">Meta</span>
+                            <span class="meta-valor">R$10.000</span>
+                        </div>
+
+                        <div class="meta-info">
+                            <span class="meta-label">Prazo</span>
+                            <span class="meta-valor">Dez. 2026</span>
+                        </div>
                     </div>
 
-                    <div class="meta-info">
-                        <span class="meta-label">Prazo</span>
-                        <span class="meta-valor">Dez. 2026</span>
-                    </div>
-                </div>
+                    <div class="meta-info-progresso">
 
-                <div class="meta-info-progresso">
+                        <div class="meta-info">
+                            <span class="meta-label">Guardado</span>
+                            <span class="meta-valor">R$3.200</span>
+                        </div>
 
-                    <div class="meta-info">
-                        <span class="meta-label">Guardado</span>
-                        <span class="meta-valor">R$3.200</span>
-                    </div>
+                        <div class="meta-info">
+                            <span class="meta-label">Faltam</span>
+                            <span class="meta-valor">R$6.800</span>
+                        </div>
 
-                    <div class="meta-info">
-                        <span class="meta-label">Faltam</span>
-                        <span class="meta-valor">R$6.800</span>
-                    </div>
+                        <div class="barra-progresso">
+                            <div class="barra-preenchida"></div>
+                        </div>
 
-                    <div class="barra-progresso">
-                        <div class="barra-preenchida"></div>
                     </div>
 
-                </div>
-
-                <div class="meta-mensal">
-                    <div class="meta-info">
-                        <span class="meta-label">Guardar por mês</span>
-                        <span class="meta-valor">R$566</span>
+                    <div class="meta-mensal">
+                        <div class="meta-info">
+                            <span class="meta-label">Guardar por mês</span>
+                            <span class="meta-valor">R$566</span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="meta-acoes">
-                    <button class="btn-adicionar-valor">Adicionar valor</button>
-                    <button class="btn-opcoes"><i class="icone-opcoes"></i></button>
-                </div>
+                    <div class="meta-acoes">
+                        <button class="btn-adicionar-valor">Adicionar valor</button>
+                        <button class="btn-opcoes"> <i class="fa-solid fa-pencil"></i>
+                        </button>
+                    </div>
 
-            </article>
+                </article>
 
-            <article class="meta-adicionar">
-                <i class="icone-adicionar"></i>
-                <h3 class="meta-adicionar-titulo">Adicionar nova meta</h3>
-            </article>
-
+                <article class="meta-card meta-adicionar">
+                    <i class="fa-solid fa-plus"></i>
+                    <h3 class="meta-adicionar-titulo">Adicionar nova meta</h3>
+                </article>
+            </div>
         </section>
 
 
         <section class="metas-secundarias">
             <h2 class="secao-titulo">Metas de longo prazo</h2>
 
-            <article class="meta-card">
+            <div>
+                <article class="meta-card">
 
-                <h3 class="meta-titulo">Casa própria</h3>
+                    <h3 class="meta-titulo">Casa própria</h3>
 
-                <div class="meta-info-topo">
+                    <div class="meta-info-topo">
 
-                    <div class="meta-info">
-                        <span class="meta-label">Meta</span>
-                        <span class="meta-valor">R$80.000 (entrada)</span>
+                        <div class="meta-info">
+                            <span class="meta-label">Meta</span>
+                            <span class="meta-valor">R$80.000 (entrada)</span>
+                        </div>
+
+                        <div class="meta-info">
+                            <span class="meta-label">Prazo</span>
+                            <span class="meta-valor">5 anos</span>
+                        </div>
+
                     </div>
 
-                    <div class="meta-info">
-                        <span class="meta-label">Prazo</span>
-                        <span class="meta-valor">5 anos</span>
+                    <div class="meta-info-progresso">
+
+                        <div class="meta-info">
+                            <span class="meta-label">Guardado</span>
+                            <span class="meta-valor">R$12.500</span>
+                        </div>
+
+                        <div class="meta-info">
+                            <span class="meta-label">Faltam</span>
+                            <span class="meta-valor">R$67.500</span>
+                        </div>
+
+                        <div class="barra-progresso">
+                            <div class="barra-preenchida"></div>
+                        </div>
+
                     </div>
 
-                </div>
-
-                <div class="meta-info-progresso">
-
-                    <div class="meta-info">
-                        <span class="meta-label">Guardado</span>
-                        <span class="meta-valor">R$12.500</span>
+                    <div class="meta-mensal">
+                        <div class="meta-info">
+                            <span class="meta-label">Guardar por mês</span>
+                            <span class="meta-valor">R$1.125</span>
+                        </div>
                     </div>
 
-                    <div class="meta-info">
-                        <span class="meta-label">Faltam</span>
-                        <span class="meta-valor">R$67.500</span>
+                    <div class="meta-acoes">
+                        <button class="btn-adicionar-valor">Adicionar valor</button>
+                        <button class="btn-opcoes"> <i class="fa-solid fa-pencil"></i>
+                        </button>
                     </div>
 
-                    <div class="barra-progresso">
-                        <div class="barra-preenchida"></div>
-                    </div>
+                </article>
 
-                </div>
-
-                <div class="meta-mensal">
-                    <div class="meta-info">
-                        <span class="meta-label">Guardar por mês</span>
-                        <span class="meta-valor">R$1.125</span>
-                    </div>
-                </div>
-
-                <div class="meta-acoes">
-                    <button class="btn-adicionar-valor">Adicionar valor</button>
-                    <button class="btn-opcoes"><i class="icone-opcoes"></i></button>
-                </div>
-
-            </article>
-
-            <article class="meta-adicionar">
-                <i class="icone-adicionar"></i>
-                <h3 class="meta-adicionar-titulo">Adicionar nova meta</h3>
-            </article>
-
+                <article class="meta-card meta-adicionar">
+                    <i class="fa-solid fa-plus"></i>
+                    <h3 class="meta-adicionar-titulo">Adicionar nova meta</h3>
+                </article>
+            </div>
         </section>
 
     </main>
 
-    <footer class="dashboard-footer">
+    <footer class="footer">
 
-        <div class="dashboard-footer-container dashboard-container">
+        <div class="footer-container container">
 
-            <div class="dashboard-footer-marca">
-                <img src="" alt="Logo">
-                <h4>© 2026 Nubis™ - Versão 1.0. Todos os direitos reservados.</h4>
+            <div class="footer-marca">
+                <img src="./imagens/Nubis.png" alt="Logo">
+                <h4>© 2026 Nubis™. Todos os direitos reservados.</h4>
             </div>
 
-            <div class="dashboard-footer-coluna">
-                <h3 class="footer-titulo">Explorar</h3>
+            <div class="footer-coluna">
 
-                <ul class="footer-lista">
-                    <li><a href="">Saiba mais</a></li>
-                    <li><a href="">Planos</a></li>
-                    <li><a href="">FAQ</a></li>
+                <h3>Explorar</h3>
+
+                <ul>
+                    <li><a href="#">Saiba mais</a></li>
+                    <li><a href="./paginas/planos.html">Planos</a></li>
+                    <li><a href="./paginas/login.html">Login</a></li>
                 </ul>
+
             </div>
 
-            <div class="dashboard-footer-coluna">
-                <h3 class="footer-titulo">Contato</h3>
+            <div class="footer-coluna">
 
-                <ul class="footer-lista">
-                    <li><i class="icone-email"></i> nubis@gmail.com</li>
+                <h3>Contato</h3>
+
+                <ul>
+                    <li><i></i> nubis@gmail.com</li>
                 </ul>
+
             </div>
 
-            <div class="dashboard-footer-coluna">
-                <h3 class="footer-titulo">Redes sociais</h3>
+            <div class="footer-coluna">
 
-                <ul class="footer-lista">
-                    <li><a href="#"><i class="icone-instagram"></i>@nubisfinanceiro</a></li>
-                    <li><a href="#"><i class="icone-twitter"></i>@nubisfinanceiro</a></li>
-                    <li><a href="#"><i class="icone-facebook"></i>Nubis Financeiro</a></li>
+                <h3>Redes sociais</h3>
+
+                <ul>
+                    <li><a href="#"><i></i>@nubisfinanceiro</a></li>
+                    <li><a href="#"><i></i>@nubisfinanceiro</a></li>
+                    <li><a href="#"><i></i>Nubis Financeiro</a></li>
                 </ul>
+
             </div>
 
-            <div class="dashboard-footer-coluna">
-                <h3 class="footer-titulo">Legal</h3>
+            <div class="footer-coluna">
 
-                <ul class="footer-lista">
+                <h3>Legal</h3>
+
+                <ul>
                     <li><a href="#">Política de privacidade</a></li>
                     <li><a href="#">Termos de uso</a></li>
                 </ul>
+
             </div>
 
         </div>

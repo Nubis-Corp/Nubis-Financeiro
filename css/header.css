@@ -1,0 +1,80 @@
+/* Reset básico */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Container reutilizável */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 2rem;
+    width: 100%;
+}
+
+/* Header */
+.header {
+    background: white;
+    height: clamp(100px, 12vh, 118px);
+    display: flex;
+    align-items: center;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    height: 100%;
+}
+
+/* Logo */
+.logo img {
+    height: 80px;
+    width: auto;
+}
+
+/* Menu */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #384240;
+    font-weight: 500;
+}
+
+/* Botão de notificação */
+.btn-notificacao {
+    background: #384240;
+    color: #fff;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+/* Botão de perfil (avatar) */
+.btn-perfil {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.btn-perfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
