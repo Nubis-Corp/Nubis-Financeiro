@@ -1,0 +1,309 @@
+/* ===================== */
+/* RESET */
+/* ===================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f9fbfb;
+    color: #333;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===================== */
+/* MAIN */
+/* ===================== */
+
+.dashboard {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.dashboard section {
+    margin-bottom: 3rem;
+}
+
+/* ===================== */
+/* HEADER */
+/* ===================== */
+
+.topo {
+    background: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+}
+
+.menu a:hover {
+    color: #28AE8F;
+}
+
+/* perfil */
+
+.btn-perfil {
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+.btn-perfil img {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* ===================== */
+/* RESUMO FINANCEIRO */
+/* ===================== */
+
+.resumo-financeiro {
+    display: flex;
+    flex-wrap: wrap;
+    background: #fff;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.resumo-header {
+    width: 100%;
+    text-align: center;
+}
+
+.card-resumo {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-right: 1px solid #D2D2D2;
+}
+
+.card-resumo:last-child {
+    border-right: none;
+}
+
+.lista-resumo {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.lista-resumo li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total {
+    font-weight: bold;
+}
+
+.entradas { color: #28AE8F; }
+.saidas { color: #EB3507; }
+.saldo { color: #28AE8F; }
+
+/* barra saldo */
+
+.barra-saldo {
+    height: 8px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progresso-saldo {
+    height: 100%;
+    width: 50%;
+    background: #28AE8F;
+}
+
+/* ===================== */
+/* GASTOS */
+/* ===================== */
+
+.grid-gastos-principais {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.grid-categorias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.card-gasto {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lista-gastos {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.item-gasto {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #D2D2D2;
+}
+
+.item-gasto:last-child {
+    border-bottom: none;
+}
+
+.valor {
+    margin-left: auto;
+}
+
+.negativo {
+    color: #EB3507;
+}
+
+/* botão adicionar */
+
+.btn-adicionar {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-adicionar i {
+    width: 28px;
+    height: 28px;
+    background: #384240;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===================== */
+/* CARTÕES */
+/* ===================== */
+
+.cartoes {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-cartao {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.cartao-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-cartao {
+    list-style: none;
+}
+
+.info-cartao li {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ===================== */
+/* ANÁLISE */
+/* ===================== */
+
+.analise-financeira {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-grafico {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    min-height: 250px;
+}
+
+/* ===================== */
+/* FOOTER */
+/* ===================== */
+
+.dashboard-footer {
+    background: #eee;
+    padding: 2rem;
+}
+
+.dashboard-footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+}
+
+.dashboard-footer-coluna ul {
+    list-style: none;
+}
+
+/* ===================== */
+/* RESPONSIVO */
+/* ===================== */
+
+@media (max-width: 768px) {
+    .grid-gastos-principais {
+        grid-template-columns: 1fr;
+    }
+}
