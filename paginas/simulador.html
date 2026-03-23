@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador</title>
+    <link rel="stylesheet" href="./../css/style.css">
+    <link rel="stylesheet" href="./../css/header.css">
+    <link rel="stylesheet" href="./../css/simulador.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar container">
+            <div class="logo">
+                <img src="./../imagens/Nubis.png" alt="Logo da Nubis">
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="./tela_principal.html">Geral</a></li>
+                <li><a href="./metas.html">Metas</a></li>
+                <li><a href="#">Simulador</a></li>
+                <li><a href="./planejador.html">Calculadora</a></li>
+                <li><button class="btn-notificacao"><i class="fa-solid fa-bell"></i></button></li>
+                <li><button class="btn-perfil"><img src="./../imagens/mulher-estudando.jpg"
+                            alt="Foto de perfil"></button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="simulacao-investimento">
+        <h2 class="titulo-secao">Simule um investimento</h2>
+        <form action="" class="formulario-simulacao">
+            <fieldset class="grupo-investimento">
+                <legend class="titulo-fieldset">Dados do investimento</legend>
+                <article class="grupo-input">
+                    <label for="investimentoInicial" class="rotulo-input">Investimento inicial</label>
+                    <input type="text" name="investimentoInicial" id="investimentoInicial" placeholder="R$ 0,00"
+                        inputmode="decimal" class="input-texto">
+                </article>
+                <article class="grupo-input">
+                    <label for="aportesMensais" class="rotulo-input">Aportes mensais</label>
+                    <input type="text" name="aportesMensais" id="aportesMensais" placeholder="R$ 0,00"
+                        inputmode="decimal" class="input-texto">
+                </article>
+                <article class="grupo-input">
+                    <label for="periodoAplicacao" class="rotulo-input">Período de aplicação</label>
+                    <div class="controle-periodo">
+                        <input type="number" name="periodoAplicacao" id="periodoAplicacao" placeholder="0" min="0"
+                            class="input-numero">
+                        <button type="button" class="botao-aumentar">+</button>
+                        <button type="button" class="botao-diminuir">-</button>
+                        <select name="tipoPeriodoAplicacao" id="tipoPeriodoAplicacao" class="selecao-periodo">
+                            <option value="dias">Dias</option>
+                            <option value="semanas">Semanas</option>
+                            <option value="meses">Meses</option>
+                            <option value="anos">Anos</option>
+                        </select>
+                    </div>
+                </article>
+            </fieldset>
+
+            <fieldset class="grupo-taxa-selic">
+                <legend class="titulo-fieldset">Taxas Selic</legend>
+                <article class="grupo-input">
+                    <header class="cabecalho-input">
+                        <label for="selicEfetivada1" class="rotulo-input">Selic efetivada (a.a.)</label>
+                        <button type="button" class="botao-info">i</button>
+                    </header>
+                    <input type="text" name="selicEfetivada1" id="selicEfetivada1" placeholder="0 %" inputmode="decimal"
+                        class="input-texto">
+                </article>
+                <article class="grupo-input">
+                    <header class="cabecalho-input">
+                        <label for="selicEfetivada2" class="rotulo-input">Selic efetivada (a.a.)</label>
+                        <button type="button" class="botao-info">i</button>
+                    </header>
+                    <input type="text" name="selicEfetivada2" id="selicEfetivada2" placeholder="0 %" inputmode="decimal"
+                        class="input-texto">
+                </article>
+                <article class="grupo-input">
+                    <header class="cabecalho-input">
+                        <label for="selicEfetivada3" class="rotulo-input">Selic efetivada (a.a.)</label>
+                        <button type="button" class="botao-info">i</button>
+                    </header>
+                    <input type="text" name="selicEfetivada3" id="selicEfetivada3" placeholder="0 %" inputmode="decimal"
+                        class="input-texto">
+                </article>
+                <article class="grupo-input">
+                    <header class="cabecalho-input">
+                        <label for="selicEfetivada4" class="rotulo-input">Selic efetivada (a.a.)</label>
+                        <button type="button" class="botao-info">i</button>
+                    </header>
+                    <input type="text" name="selicEfetivada4" id="selicEfetivada4" placeholder="0 %" inputmode="decimal"
+                        class="input-texto">
+                </article>
+            </fieldset>
+
+            <fieldset class="grupo-outras-taxas">
+                <legend class="titulo-fieldset">Outras taxas</legend>
+                <article class="grupo-input">
+                    <label for="juroTesouroPrefixado" class="rotulo-input">Juro nominal do Tesouro Prefixado
+                        (a.a.)</label>
+                    <input type="text" name="juroTesouroPrefixado" id="juroTesouroPrefixado" placeholder="0 %"
+                        inputmode="decimal" class="input-texto">
+                </article>
+                <article class="grupo-input">
+                    <label for="taxaCustodia" class="rotulo-input">Taxa de custódia da B3 no Tesouro Direto
+                        (a.a.)</label>
+                    <input type="text" name="taxaCustodia" id="taxaCustodia" placeholder="0 %" inputmode="decimal"
+                        class="input-texto">
+                </article>
+                <article class="grupo-input">
+                    <label for="juroTesouroIPCA" class="rotulo-input">Juro real do Tesouro IPCA+ (a.a.)</label>
+                    <input type="text" name="juroTesouroIPCA" id="juroTesouroIPCA" placeholder="0 %" inputmode="decimal"
+                        class="input-texto">
+                </article>
+                <article class="grupo-input">
+                    <label for="taxaDI" class="rotulo-input">Taxa de administração do fundo DI (a.a.)</label>
+                    <div class="controle-stepper">
+                        <input type="text" name="taxaDI" id="taxaDI" placeholder="0 %" inputmode="decimal"
+                            class="input-texto">
+                        <button type="button" class="botao-aumentar">+</button>
+                        <button type="button" class="botao-diminuir">-</button>
+                    </div>
+                </article>
+                <article class="grupo-input">
+                    <label for="rentabilidadeCDB" class="rotulo-input">Rentabilidade do CDB</label>
+                    <div class="controle-selecao">
+                        <input type="text" name="rentabilidadeCDB" id="rentabilidadeCDB" placeholder="0 %"
+                            inputmode="decimal" class="input-texto">
+                        <select name="porcentagemCDI" id="porcentagemCDI" class="selecao-cdi">
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                </article>
+                <article class="grupo-input">
+                    <label for="rentabilidadeDI" class="rotulo-input">Rentabilidade do fundo DI (% do CDI)</label>
+                    <input type="text" name="rentabilidadeDI" id="rentabilidadeDI" placeholder="0 %" inputmode="decimal"
+                        class="input-texto">
+                </article>
+                <article class="grupo-input">
+                    <label for="rentabilidadeLCI" class="rotulo-input">Rentabilidade da LCI/LCA</label>
+                    <div class="controle-selecao">
+                        <input type="text" name="rentabilidadeLCI" id="rentabilidadeLCI" placeholder="0 %"
+                            inputmode="decimal" class="input-texto">
+                        <select name="porcentagemCDI2" id="porcentagemCDI2" class="selecao-cdi">
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                </article>
+                <article class="grupo-input">
+                    <header class="cabecalho-input">
+                        <label for="rentabilidadePoupanca" class="rotulo-input">Rentabilidade da Poupança (a.m.)</label>
+                        <button class="botao-info">i</button>
+                    </header>
+                    <input type="text" name="rentabilidadePoupanca" id="rentabilidadePoupanca" placeholder="0 %"
+                        inputmode="decimal" class="input-texto">
+                </article>
+            </fieldset>
+
+            <p class="descricao-simulacao">Esses são os parâmetros padrão utilizados na sua simulação. Você pode
+                alterá-los e refazer os cálculos para uma simulação avançada.</p>
+
+            <button type="submit" class="botao-simular">Simular investimento</button>
+        </form>
+    </section>
+    <section class="opcoes-investimento">
+        <header class="cabecalho-secao">
+            <h2 class="titulo-secao">Melhores opções de investimento</h2>
+            <p class="subtitulo-secao">Valor líquido de resgate</p>
+        </header>
+        <div class="lista-investimentos">
+            <article class="cartao-investimento">
+                <span class="nome-investimento">LCI e LCA</span>
+                <div class="valor-investimento"></div>
+            </article>
+            <article class="cartao-investimento">
+                <span class="nome-investimento">Tesouro Prefixado</span>
+                <div class="valor-investimento"></div>
+            </article>
+            <article class="cartao-investimento">
+                <span class="nome-investimento">CDB</span>
+                <div class="valor-investimento"></div>
+            </article>
+            <article class="cartao-investimento">
+                <span class="nome-investimento">Poupança</span>
+                <div class="valor-investimento"></div>
+            </article>
+            <article class="cartao-investimento">
+                <span class="nome-investimento">Tesouro Selic</span>
+                <div class="valor-investimento"></div>
+            </article>
+            <article class="cartao-investimento">
+                <span class="nome-investimento">Tesouro IPCA+</span>
+                <div class="valor-investimento"></div>
+            </article>
+            <article class="cartao-investimento">
+                <span class="nome-investimento">Fundo DI</span>
+                <div class="valor-investimento"></div>
+            </article>
+            <article class="cartao-investimento">
+                <span class="nome-investimento">Correção pelo IPCA</span>
+                <div class="valor-investimento"></div>
+            </article>
+        </div>
+    </section>
+
+    <section class="tabela-calculo">
+        <h2 class="titulo-secao">Tabela de cálculo</h2>
+        <header class="resumo-investimentos">
+            <div class="resumo-item">
+                <span class="descricao-item">Valor inicial</span>
+                <strong class="valor-item">R$ 00,00</strong>
+            </div>
+            <div class="resumo-item">
+                <span class="descricao-item">Aportes Mensais</span>
+                <strong class="valor-item">R$ 00,00</strong>
+            </div>
+            <div class="resumo-item">
+                <span class="descricao-item">Período da aplicação</span>
+                <strong class="valor-item">R$ 00,00</strong>
+            </div>
+            <div class="resumo-item">
+                <span class="descricao-item">Soma dos valores investidos</span>
+                <strong class="valor-item">R$ 00,00</strong>
+            </div>
+        </header>
+
+        <table class="tabela-investimentos">
+            <caption class="titulo-tabela">Resultado da simulação de investimentos</caption>
+
+            <thead class="cabecalho-tabela">
+                <tr>
+                    <th scope="col" class="coluna-indicador">Indicador</th>
+                    <th scope="col" class="coluna-investimento">LCI e LCA</th>
+                    <th scope="col" class="coluna-investimento">CDB</th>
+                    <th scope="col" class="coluna-investimento">Tesouro Selic</th>
+                    <th scope="col" class="coluna-investimento">Fundo DI</th>
+                    <th scope="col" class="coluna-investimento">Tesouro Prefixado</th>
+                    <th scope="col" class="coluna-investimento">Poupança</th>
+                    <th scope="col" class="coluna-investimento">Tesouro IPCA+</th>
+                </tr>
+            </thead>
+
+            <tbody class="corpo-tabela">
+                <tr>
+                    <th scope="row" class="linha-indicador">Valor bruto acumulado</th>
+                    <td class="linha-valor">R$ 0,00</td>
+                    <td class="linha-valor">R$ 0,00</td>
+                    <td class="linha-valor">R$ 0,00</td>
+                    <td class="linha-valor">R$ 0,00</td>
+                    <td class="linha-valor">R$ 0,00</td>
+                    <td class="linha-valor">R$ 0,00</td>
+                    <td class="linha-valor">R$ 0,00</td>
+                </tr>
+                <!-- resto das linhas segue o mesmo padrão -->
+            </tbody>
+
+            <tfoot class="rodape-tabela">
+                <tr>
+                    <th scope="row" class="linha-indicador">Ganho líquido</th>
+                    <td class="linha-valor">R$ 0,00</td>
+                    <td class="linha-valor">R$ 0,00</td>
+                    <td class="linha-valor">R$ 0,00</td>
+                    <td class="linha-valor">R$ 0,00</td>
+                    <td class="linha-valor">R$ 0,00</td>
+                    <td class="linha-valor">R$ 0,00</td>
+                    <td class="linha-valor">R$ 0,00</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+</body>
+
+</html>

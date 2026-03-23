@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Definições gerais */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #EDEDED;
+    font-family: Poppins;
+    height: 100vh;
+}
+
+h1, h2, h3, h4 {
+    color: #384240;
+}
+
+/* Header */
+
+.header {
+    background: white;
+    min-height: 100px;
+    height: clamp(100px, 12vh, 118px);
+    display: flex;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.03);
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 3rem;
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.navbar-opcoes {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 60px;
+}
+
+.logo img {
+    height: 30px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #384240;
+    font-weight: 500;
+    transition: 0.2s;
+    font-size: 18px;
+}
+
+.nav-menu a:hover {
+    color: #28AE8F;
+}
+
+.btn-login {
+    padding: 10px 44px;
+    border: 2.5px solid #28AE8F;
+    color: #28AE8F;
+    background: transparent;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: auto;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    color: #fff;
+    background: #28AE8F;
+}
+
+/* Main */
+/* Primeira seção */
+.hero {
+    padding: 3rem 0 0 0;
+    width: 100%;
+    width: 100vw;
+    display: flex;
+    align-items: stretch;
+}
+
+.hero-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.hero-conteudo {
+    max-width: 800px;
+    width: 100%;
+}
+
+.hero-conteudo-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    
+}
+
+.hero-imagem {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.hero-imagem img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+
+.hero-titulo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+    max-width: 700px;
+    color: #384240;
+
+}
+
+.hero-titulo span {
+    color: #28AE8F;
+}
+
+.hero-texto {
+    margin-top: 18px;
+    max-width: 700px;
+    color: #606060;
+}
+
+
+.btn-principal {
+    margin-top: 35px;
+    padding: 15px 60px;
+    background: #28AE8F;
+    border: none;
+    font-weight: bold;
+    letter-spacing: 0.7px;
+    border-radius: 40px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-principal:hover {
+    background: #5d6b63;
+}
+/* Funções */
+
+.funcoes {
+    height: 500px;
+    display: flex;
+    background: #e3ece3;
+    width: 100%;
+}
+
+.funcoes-container {
+    padding: 3rem 0;
+    background: #e3ece3;
+    width: 100%;
+    max-width: 600px;
+}
+
+.funcoes-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Título da seção */
+.secao-titulo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+}
+
+/* Texto da seção */
+.secao-texto {
+    color: #606060;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 100%;
+}
+
+/* Lista de funcionalidades */
+.funcoes-lista {
+    list-style: none;
+    padding: 0;
+}
+
+.funcoes-lista li {
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: #28AE8F;
+    gap: 1rem;
+    display: flex;
+}
+
+.funcoes-lista li i {
+    display: flex;           /* transforma em flex */
+    align-items: center;     /* centraliza vertical */
+    justify-content: center; /* centraliza horizontal */
+    color: #fff;
+    background: #28AE8F;
+    width: 30px;             /* define largura fixa */
+    height: 30px;            /* define altura fixa igual */
+    border-radius: 50%;      /* círculo perfeito */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    font-size: 14px;         /* tamanho do ícone */
+}
+
+.funcoes-grid {
+    flex: 1;
+    height: 100%;
+    padding: 3rem 5rem;
+    border-radius: 60px 0px 0px 0px;
+    background: #839483;
+    display: flex;
+    width: 100%;
+}
+
+/* Cartões individuais */
+.funcoes-card {
+    width: 100%;          /* ocupa toda a coluna do grid */
+    max-width: 330px;     /* limita para 330px */
+    height: 160px;        /* altura fixa aproximada */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+    border-radius: 14px;
+    padding: 20px;        /* um pouco menor para caber na altura */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;          /* reduz gap interno para caber no tamanho */
+    justify-content: flex-start; /* mantém conteúdo alinhado ao topo */
+}
+
+/* Ícone dentro do card */
+.funcoes-card i {
+    font-size: 20px;      /* um pouco menor */
+    color: #28AE8F;
+}
+
+/* Título do card */
+.funcoes-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;      /* reduzido para caber no card */
+    margin-bottom: 0.3rem;
+}
+
+/* Texto do card */
+.funcoes-card p {
+    color: #606060;
+    font-size: 10px;      /* reduzido para caber na altura */
+    line-height: 1.3;
+    overflow: hidden;     /* evita overflow do texto */
+}
+
+/* Empresa, missão visão e valores */
+
+.empresa {
+
+    padding: 120px 0;
+
+}
+
+.secao-header {
+
+    text-align: center;
+    margin-bottom: 60px;
+
+}
+
+.secao-subtitulo {
+
+    color: #606060;
+    font-size: 18px;
+    margin-top: 10px;
+
+}
+
+.empresa-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 280px);
+    justify-content: center;
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.empresa-card {
+    background: #384240;
+    color: white;
+    padding: 35px;
+    border-radius: 16px;
+    min-height: 140px;
+}
+
+.empresa-card h4 {
+
+    font-family: 'Poppins';
+    font-size: 20px;
+    margin-bottom: 10px;
+
+}
+
+.empresa-card p {
+
+    color: #d0d0d0;
+
+}
+
+.sobre {
+
+    padding: 120px 0;
+
+}
+
+.sobre-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 120px;
+    align-items: center;
+}
+
+.dados {
+
+    display: flex;
+    gap: 60px;
+    margin: 30px 0;
+
+}
+
+
+.dados-card h3 {
+    font-family: 'Poppins';
+    font-size: 30px;
+    color: #28AE8F;
+    margin-bottom: 8px;
+}
+
+
+.dados-card p {
+
+    font-size: 14px;
+    color: #606060;
+
+}
+
+.sobre-imagem img {
+
+    width: 100%;
+    max-width: 400px;
+
+}
+
+.sobre-imagem {
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.patrocinadores {
+
+    background: #28AE8F;
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+
+
+}
+
+.footer {
+
+    background: #f5f5f5;
+    padding: 60px 0;
+
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.footer-coluna ul {
+
+    list-style: none;
+
+}
+
+.footer-coluna li {
+
+    margin-bottom: 10px;
+
+}
+
+.footer-coluna a {
+
+    text-decoration: none;
+    color: #384240;
+
+}
+
+.verde {
+    color: #28AE8F;
+}

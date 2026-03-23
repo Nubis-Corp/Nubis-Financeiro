@@ -1,0 +1,244 @@
+/* ===================== */
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f9fbfb;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* ===================== */
+/* TÍTULOS DE SEÇÃO */
+.titulo-secao {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+/* ===================== */
+/* FORMULÁRIO DE SIMULAÇÃO */
+.simulacao-investimento {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.formulario-simulacao fieldset {
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.titulo-fieldset {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #28AE8F;
+}
+
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.rotulo-input {
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+.input-texto, .input-numero, .selecao-periodo, .selecao-cdi {
+    padding: 0.5rem 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.input-texto:focus, .input-numero:focus, .selecao-periodo:focus, .selecao-cdi:focus {
+    outline: none;
+    border-color: #28AE8F;
+}
+
+.controle-periodo, .controle-stepper, .controle-selecao {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.botao-aumentar, .botao-diminuir {
+    background: #28AE8F;
+    color: #fff;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.botao-info {
+    background: #28AE8F;
+    color: #fff;
+    border: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.descricao-simulacao {
+    margin: 1rem 0;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.botao-simular {
+    display: block;
+    width: 100%;
+    background: #28AE8F;
+    color: #fff;
+    border: none;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.botao-simular:hover {
+    background: #1f8e72;
+}
+
+/* ===================== */
+/* OPÇÕES DE INVESTIMENTO */
+.opcoes-investimento {
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+
+.lista-investimentos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.cartao-investimento {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nome-investimento {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.valor-investimento {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #28AE8F;
+}
+
+/* ===================== */
+/* TABELA DE CÁLCULO */
+.tabela-calculo {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.resumo-investimentos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.resumo-item {
+    flex: 1;
+    min-width: 180px;
+    background: #f2f2f2;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.valor-item {
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: 600;
+    color: #28AE8F;
+}
+
+.tabela-investimentos {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.tabela-investimentos th, .tabela-investimentos td {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+}
+
+.tabela-investimentos th {
+    background: #f2f2f2;
+    color: #333;
+}
+
+.linha-valor {
+    color: #28AE8F;
+}
+
+.tabela-investimentos caption {
+    caption-side: top;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* ===================== */
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .navbar.container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .formulario-simulacao fieldset {
+        padding: 1rem;
+    }
+
+    .resumo-investimentos {
+        flex-direction: column;
+    }
+
+    .tabela-investimentos {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
