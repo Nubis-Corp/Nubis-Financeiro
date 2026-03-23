@@ -1,0 +1,174 @@
+/* RESET BÁSICO (importante) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CONTAINER PRINCIPAL */
+.login-pagina {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* EVITA PROBLEMA GLOBAL COM TODAS AS SECTIONS */
+.login-pagina section {
+    width: 50%;
+    min-height: 100vh;
+}
+
+/* ========================= */
+/* PRIMEIRO BLOCO (HERO) */
+/* ========================= */
+
+.login-hero {
+    color: #fff;
+    background: url('./../imagens/background.jpg') center/cover no-repeat;
+    padding: 4.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.login-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.login-estrelas img {
+    max-width: 25px;
+}
+
+.login-logo {
+    max-width: 120px; /* melhor que % */
+}
+
+.login-titulo {
+    font-size: 2rem;
+}
+
+.login-texto {
+    font-size: 1.25rem;
+}
+
+.login-conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.login-copyright {
+    font-size: 0.75rem;
+}
+
+/* ========================= */
+/* SEGUNDO BLOCO (FORM) */
+/* ========================= */
+
+.login-painel {
+    background: #fff;
+    color: #384240;
+    padding: 3rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* melhor alinhamento */
+    gap: 2rem;
+}
+
+.painel-header {
+    font-size: 1.5rem;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.painel-logo {
+    max-width: 35px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.login-form a {
+    color: #28AE8F;
+}
+
+.form-titulo {
+    font-size: 1.5rem;
+}
+
+.form-subtitulo {
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+.form-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    font-weight: 500;
+    font-size: 0.7rem;
+}
+
+.form-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.form-conta {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.cadastrar-texto {
+    font-size: 0.75rem;
+}
+
+.form-cabecalho {
+    text-align: center;
+}
+
+.form-campo input {
+    padding: 1rem;
+    border-radius: 50px;
+    border: 1px solid #c6c6c6;
+    width: 100%;
+}
+
+.esqueci-senha {
+    font-size: 0.75rem;
+    align-self: flex-start;
+}
+
+.login-botao {
+    width: 100%;
+    background: #45BEA2;
+    color: #fff;
+    padding: 1rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.25rem;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: 0.2s;
+}
+
+.login-botao:hover {
+    background: #3aa88f;
+}
