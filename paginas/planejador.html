@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planejador | Nubis Financeiro</title>
+    <link rel="stylesheet" href="./../css/style.css">
+    <link rel="stylesheet" href="./../css/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar container">
+            <div class="logo">
+                <img src="./../imagens/Nubis.png" alt="Logo da Nubis">
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="./tela_principal.html">Geral</a></li>
+                <li><a href="./metas.html">Metas</a></li>
+                <li><a href="./simulador.html">Simulador</a></li>
+                <li><a href="#">Calculadora</a></li>
+                <li><button class="btn-notificacao"><i class="fa-solid fa-bell"></i></button></li>
+                <li><button class="btn-perfil"><img src="./../imagens/mulher-estudando.jpg"
+                            alt="Foto de perfil"></button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CALCULADORA -->
+    <section class="calculadora-renda">
+
+        <h2 class="titulo-secao">Calculadora de divisão de renda</h2>
+
+        <!-- FORMULÁRIO -->
+        <form class="formulario-calculo">
+
+            <fieldset class="grupo-calculo">
+                <legend class="titulo-grupo">Dados para cálculo</legend>
+
+                <div class="grupo-input">
+                    <label for="metodo" class="rotulo-input">Escolha um método</label>
+                    <select id="metodo" class="selecao-metodo">
+                        <option value="50-30-20">50-30-20</option>
+                        <option value="60-20-20">60-20-20</option>
+                        <option value="70-20-10">70-20-10</option>
+                    </select>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="salario" class="rotulo-input">Insira seu salário</label>
+                    <input type="text" id="salario" class="input-texto" value="R$ 3000">
+                </div>
+
+                <button type="submit" class="botao-calcular">Calcular</button>
+
+            </fieldset>
+
+        </form>
+
+        <!-- RESULTADO -->
+        <section class="resultado-calculo">
+
+            <h3 class="titulo-resultado">Resultado da divisão</h3>
+
+            <!-- barra com significado de progresso -->
+            <div class="barra-progresso" role="progressbar" aria-label="Distribuição da renda">
+                <div class="progresso essencial"></div>
+                <div class="progresso lazer"></div>
+                <div class="progresso poupanca"></div>
+            </div>
+
+            <!-- lista semântica -->
+            <ul class="lista-resultados">
+
+                <li class="item-resultado">
+                    <span class="nome-categoria">Essencial 50%</span>
+                    <span class="valor-categoria">R$ 1500,00</span>
+                </li>
+
+                <li class="item-resultado">
+                    <span class="nome-categoria">Lazer 30%</span>
+                    <span class="valor-categoria">R$ 900,00</span>
+                </li>
+
+                <li class="item-resultado">
+                    <span class="nome-categoria">Poupança 20%</span>
+                    <span class="valor-categoria">R$ 600,00</span>
+                </li>
+
+            </ul>
+
+        </section>
+
+    </section>
+
+    <!-- EXPLICAÇÃO -->
+    <section class="explicacao-metodos">
+
+        <h2 class="titulo-secao">Entenda melhor</h2>
+
+        <article class="bloco-explicacao">
+            <h3 class="titulo-bloco">O que são métodos de organização financeira?</h3>
+            <p class="texto-explicacao">
+                Os métodos de organização financeira são estratégias que ajudam a dividir sua renda mensal de forma
+                equilibrada entre necessidades, lazer e poupança. Eles funcionam como um guia para que você saiba quanto
+                do seu salário pode ser destinado a cada tipo de gasto, evitando desequilíbrios no orçamento.
+            </p>
+        </article>
+
+        <article class="bloco-explicacao">
+            <h3 class="titulo-bloco">Como aplicar no dia a dia?</h3>
+            <p class="texto-explicacao">
+                Primeiro, escolha um método que faça sentido para sua realidade financeira. Depois, informe sua renda
+                mensal e veja como ela pode ser distribuída entre diferentes categorias. A partir disso, você pode usar
+                esses valores como referência para controlar suas despesas e manter seu planejamento ao longo do mês.
+            </p>
+        </article>
+
+        <article class="bloco-explicacao">
+            <h3 class="titulo-bloco">Vantagens de usar um método financeiro</h3>
+            <p class="texto-explicacao">
+                Utilizar um método de organização financeira traz mais clareza sobre para onde seu dinheiro está indo,
+                ajuda a manter os gastos sob controle e incentiva a criação de uma reserva para o futuro. Com um
+                planejamento estruturado, fica mais fácil tomar decisões financeiras conscientes e alcançar metas
+                pessoais.
+            </p>
+        </article>
+
+    </section>
+
+</body>
+
+</html>
