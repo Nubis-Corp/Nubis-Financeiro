@@ -6,13 +6,13 @@
     font-family: 'Segoe UI', sans-serif;
 }
 
-/* BODY */
+
 body {
     background: #f4f6f8;
     color: #2c3e50;
 }
 
-/* ================= HEADER ================= */
+
 .cabecalho {
     background: #fff;
     padding: 15px 40px;
@@ -29,7 +29,7 @@ body {
     height: 45px;
 }
 
-/* MENU */
+
 .menu {
     display: flex;
     align-items: center;
@@ -48,7 +48,7 @@ body {
     color: #00a896;
 }
 
-/* BOTÕES HEADER */
+
 .botao-notificacao,
 .botao-perfil {
     width: 40px;
@@ -58,12 +58,12 @@ body {
     cursor: pointer;
 }
 
-/* NOTIFICAÇÃO */
+
 .botao-notificacao {
     background: #2c3e50;
 }
 
-/* PERFIL */
+
 .botao-perfil {
     overflow: hidden;
 }
@@ -74,13 +74,11 @@ body {
     object-fit: cover;
 }
 
-/* ================= LAYOUT ================= */
 .pagina-configuracoes {
     display: flex;
     height: calc(100vh - 80px);
 }
 
-/* ================= MENU LATERAL ================= */
 .menu-lateral {
     width: 260px;
     background: #2f3e3b;
@@ -95,7 +93,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* BOTÕES MENU */
+
 .botao-menu-lateral {
     width: 100%;
     background: transparent;
@@ -113,7 +111,7 @@ body {
     background: rgba(255,255,255,0.05);
 }
 
-/* ATIVO */
+
 .botao-menu-lateral.ativo {
     color: #00a896;
     font-weight: 600;
@@ -127,7 +125,7 @@ body {
     justify-content: center;
 }
 
-/* CAIXA CENTRAL */
+
 .conteudo-dinamico {
     width: 100%;
     max-width: 800px;
