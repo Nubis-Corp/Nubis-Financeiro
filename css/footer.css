@@ -1,0 +1,45 @@
+.footer {
+    background: #e6e6e6;
+    padding: 40px;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-marca img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.footer-marca p {
+    font-size: 12px;
+    color: #666;
+}
+
+.footer-coluna h4 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer-coluna ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-coluna li {
+    margin-bottom: 6px;
+}
+
+.footer-coluna a {
+    text-decoration: none;
+    color: #555;
+}
+
+.footer-coluna a:hover {
+    color: #00a896;
+}

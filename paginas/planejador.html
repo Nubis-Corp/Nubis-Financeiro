@@ -25,7 +25,7 @@
                 <li><a href="./simulador.html">Simulador</a></li>
                 <li><a href="#">Calculadora</a></li>
                 <li><button class="btn-notificacao"><i class="fa-solid fa-bell"></i></button></li>
-                <li><button class="btn-perfil"><img src="./../imagens/mulher-estudando.jpg"
+                <li><button class="btn-perfil"><img src="./../imagens/perfil.png"
                             alt="Foto de perfil"></button></li>
             </ul>
         </nav>
@@ -38,66 +38,96 @@
             <h2 class="titulo-secao">Calculadora de divisão de renda</h2>
 
             <div class="wrapper-calculo">
-            <!-- FORMULÁRIO -->
-            <form class="formulario-calculo">
 
-                <fieldset class="grupo-calculo">
-                    <legend class="titulo-grupo">Dados para cálculo</legend>
+                <!-- FORMULÁRIO -->
+                <form class="formulario-calculo">
 
                     <div class="grupo-input">
-                        <label for="metodo" class="rotulo-input">Escolha um método</label>
-                        <select id="metodo" class="selecao-metodo">
-                            <option value="50-30-20">50-30-20</option>
-                            <option value="60-20-20">60-20-20</option>
-                            <option value="70-20-10">70-20-10</option>
+                        <label>Escolha um método</label>
+                        <select>
+                            <option>50-30-20</option>
+                            <option>60-20-20</option>
+                            <option>70-20-10</option>
                         </select>
                     </div>
 
                     <div class="grupo-input">
-                        <label for="salario" class="rotulo-input">Insira seu salário</label>
-                        <input type="text" id="salario" class="input-texto" value="R$ 3000">
+                        <label>Insira seu salário</label>
+                        <input type="text" value="R$ 3000">
                     </div>
 
                     <button type="submit" class="botao-calcular">Calcular</button>
 
-                </fieldset>
+                </form>
 
-            </form>
+                <!-- RESULTADO -->
+                <div class="resultado-calculo">
 
-            <!-- RESULTADO -->
-            <section class="resultado-calculo">
+                    <h3>Resultado da divisão</h3>
 
-                <h3 class="titulo-resultado">Resultado da divisão</h3>
+                    <div class="barra">
+                        <div class="parte essencial">50%</div>
+                        <div class="parte lazer">30%</div>
+                        <div class="parte poupanca">20%</div>
+                    </div>
 
-                <!-- barra com significado de progresso -->
-                <div class="barra-progresso" role="progressbar" aria-label="Distribuição da renda">
-                    <div class="progresso essencial"></div>
-                    <div class="progresso lazer"></div>
-                    <div class="progresso poupanca"></div>
+                    <ul class="lista-resultados">
+                        <li><span class="essencial-texto">Essencial (50%)</span> <span>R$ 1500</span></li>
+                        <li><span class="lazer-texto">Lazer (30%)</span> <span>R$ 900</span></li>
+                        <li><span class="poupanca-texto">Poupar (20%)</span> <span>R$ 600</span></li>
+                    </ul>
+
                 </div>
 
-                <!-- lista semântica -->
-                <ul class="lista-resultados">
+            </div>
 
-                    <li class="item-resultado">
-                        <span class="nome-categoria">Essencial 50%</span>
-                        <span class="valor-categoria">R$ 1500,00</span>
-                    </li>
+        </section>
 
-                    <li class="item-resultado">
-                        <span class="nome-categoria">Lazer 30%</span>
-                        <span class="valor-categoria">R$ 900,00</span>
-                    </li>
+        <div class="grupo-input">
+            <label for="salario" class="rotulo-input">Insira seu salário</label>
+            <input type="text" id="salario" class="input-texto" value="R$ 3000">
+        </div>
 
-                    <li class="item-resultado">
-                        <span class="nome-categoria">Poupança 20%</span>
-                        <span class="valor-categoria">R$ 600,00</span>
-                    </li>
+        <button type="submit" class="botao-calcular">Calcular</button>
 
-                </ul>
+        </fieldset>
 
-            </section>
-</div>
+        </form>
+
+        <!-- RESULTADO -->
+        <section class="resultado-calculo">
+
+            <h3 class="titulo-resultado">Resultado da divisão</h3>
+
+            <!-- barra com significado de progresso -->
+            <div class="barra-progresso" role="progressbar" aria-label="Distribuição da renda">
+                <div class="progresso essencial"></div>
+                <div class="progresso lazer"></div>
+                <div class="progresso poupanca"></div>
+            </div>
+
+            <!-- lista semântica -->
+            <ul class="lista-resultados">
+
+                <li class="item-resultado">
+                    <span class="nome-categoria">Essencial 50%</span>
+                    <span class="valor-categoria">R$ 1500,00</span>
+                </li>
+
+                <li class="item-resultado">
+                    <span class="nome-categoria">Lazer 30%</span>
+                    <span class="valor-categoria">R$ 900,00</span>
+                </li>
+
+                <li class="item-resultado">
+                    <span class="nome-categoria">Poupança 20%</span>
+                    <span class="valor-categoria">R$ 600,00</span>
+                </li>
+
+            </ul>
+
+        </section>
+        </div>
         </section>
 
         <!-- EXPLICAÇÃO -->
@@ -141,6 +171,7 @@
         </section>
 
     </main>
+    <script src="./../js/footer.js"></script>
 </body>
 
 </html>

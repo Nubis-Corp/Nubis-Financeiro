@@ -1,245 +1,37 @@
 /* ===================== */
-/* CALCULADORA (SECTION) */
+/* CALCULADORA */
 /* ===================== */
 
 .calculadora-renda {
-    background-color: #fff;
-    max-width: 1291px;
-    width: 100%;
-    min-height: 503px;
-
+    background: #fff;
+    max-width: 1200px;
     margin: 40px auto;
-    padding: 30px 40px;
-
+    padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
-
-/* ===================== */
-/* TÍTULO */
-/* ===================== */
-
+/* TITULO */
 .titulo-secao {
-    font-size: 1.8rem;
-    font-weight: 600;
+    font-size: 26px;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
 }
 
+/* LAYOUT LADO A LADO */
+.wrapper-calculo {
+    display: flex;
+    gap: 40px;
+}
 
 /* ===================== */
-/* CONTEÚDO (FORM + RESULTADO) */
+/* FORMULÁRIO */
 /* ===================== */
-
-.calculadora-renda > form,
-.calculadora-renda > .resultado-calculo {
-    flex: 1;
-}
-
-.calculadora-renda {
-    /* separa título do resto */
-}
-
-.calculadora-renda > form,
-.calculadora-renda > .resultado-calculo {
-    display: flex;
-}
-
-
-/* container dos dois blocos */
-.calculadora-renda {
-    /* já é flex column */
-}
-
-.calculadora-renda form,
-.calculadora-renda .resultado-calculo {
-    width: 100%;
-}
-
-
-/* agrupar lado a lado */
-.calculadora-renda {
-    /* nada aqui */
-}
-
-.calculadora-renda > form {
-    /* só pra garantir */
-}
-
-.calculadora-renda > .resultado-calculo {
-    /* só pra garantir */
-}
-
-/* wrapper flex dos dois */
-.calculadora-renda {
-    /* hack limpo: cria linha abaixo do título */
-}
-
-.calculadora-renda {
-    display: flex;
-}
-
-.calculadora-renda > .titulo-secao {
-    margin-bottom: 10px;
-}
-
-/* FLEX REAL (form + resultado) */
-.calculadora-renda {
-    flex-direction: column;
-}
-
-.calculadora-renda > form,
-.calculadora-renda > .resultado-calculo {
-    flex: 1;
-}
-
-/* cria linha horizontal */
-.calculadora-renda {
-    gap: 20px;
-}
-
-/* agrupa os dois */
-.calculadora-renda form,
-.calculadora-renda .resultado-calculo {
-    width: 100%;
-}
-
-/* layout lado a lado */
-@media (min-width: 768px) {
-    .calculadora-renda {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .calculadora-renda form,
-    .calculadora-renda .resultado-calculo {
-        width: 100%;
-    }
-
-    .calculadora-renda {
-        gap: 30px;
-    }
-
-    /* linha horizontal */
-    .calculadora-renda form,
-    .calculadora-renda .resultado-calculo {
-        flex: 1;
-    }
-
-    .calculadora-renda {
-        /* cria um wrapper visual */
-    }
-
-    .calculadora-renda form,
-    .calculadora-renda .resultado-calculo {
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* agora sim lado a lado */
-    .calculadora-renda {
-        display: flex;
-    }
-
-    .calculadora-renda > form,
-    .calculadora-renda > .resultado-calculo {
-        flex: 1;
-    }
-
-    .calculadora-renda {
-        flex-direction: column;
-    }
-
-    /* container interno */
-    .calculadora-renda {
-        position: relative;
-    }
-
-    /* solução limpa final */
-    .calculadora-renda {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .calculadora-renda .formulario-calculo,
-    .calculadora-renda .resultado-calculo {
-        flex: 1;
-    }
-
-    .calculadora-renda {
-        gap: 25px;
-    }
-
-    /* wrapper horizontal */
-    .calculadora-renda {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .calculadora-renda .formulario-calculo,
-    .calculadora-renda .resultado-calculo {
-        width: 100%;
-    }
-
-    .calculadora-renda .formulario-calculo,
-    .calculadora-renda .resultado-calculo {
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* FINAL LIMPO */
-    .calculadora-renda {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .calculadora-renda > .formulario-calculo,
-    .calculadora-renda > .resultado-calculo {
-        flex: 1;
-    }
-
-    .calculadora-renda {
-        gap: 20px;
-    }
-
-    /* AGRUPAMENTO HORIZONTAL */
-    .calculadora-renda .formulario-calculo,
-    .calculadora-renda .resultado-calculo {
-        display: flex;
-    }
-
-    .calculadora-renda {
-        display: flex;
-    }
-
-    .calculadora-renda {
-        flex-direction: column;
-    }
-
-    /* solução definitiva */
-    .calculadora-renda {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .calculadora-renda .wrapper-calculo {
-        display: flex;
-        gap: 30px;
-        width: 100%;
-    }
-}
 
 .formulario-calculo {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.grupo-calculo {
-    border: none;
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -248,98 +40,161 @@
 .grupo-input {
     display: flex;
     flex-direction: column;
-    gap: 5px;
 }
 
-.input-texto,
-.selecao-metodo {
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
+.grupo-input label {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 5px;
 }
 
+.grupo-input input,
+.grupo-input select {
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    background: #eef2f3;
+    font-size: 16px;
+}
 
 /* BOTÃO */
 .botao-calcular {
-    margin-top: auto;
-    padding: 14px;
-
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 30px;
     border: none;
-    border-radius: 10px;
-
     background: #28AE8F;
-    color: #fff;
-    font-weight: 600;
-
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .botao-calcular:hover {
-    background: #238870;
+    background: #1f8a70;
+}
+.botao-perfil {
+    width: 50px;   /* aumenta aqui */
+    height: 50px;  /* aumenta aqui */
+    border-radius: 50%;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+}
+
+.imagem-perfil {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ESSENCIAL */
+}
+/* ===================== */
+/* RESULTADO */
+/* ===================== */
+
+.resultado-calculo {
+    flex: 1;
+    background: #eef2f3;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.resultado-calculo h3 {
+    margin-bottom: 20px;
+}
+
+/* BARRA */
+.barra {
+    display: flex;
+    height: 35px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.parte {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+.essencial {
+    width: 50%;
+    background: #ff3b00;
+}
+
+.lazer {
+    width: 30%;
+    background: #5b7bd5;
+}
+
+.poupanca {
+    width: 20%;
+    background: #28AE8F;
+}
+
+/* LISTA */
+.lista-resultados {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-resultados li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+/* CORES TEXTO */
+.essencial-texto {
+    color: #ff3b00;
+}
+
+.lazer-texto {
+    color: #5b7bd5;
+}
+
+.poupanca-texto {
+    color: #28AE8F;
 }
 
 /* ===================== */
-/* SEÇÃO EXPLICAÇÃO DE MÉTODOS */
+/* EXPLICAÇÃO */
 /* ===================== */
 
 .explicacao-metodos {
-    background: #fefefe;       /* fundo leve */
-    padding: 2rem;             /* espaço interno */
-    border-radius: 10px;       /* cantos arredondados */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* sombra suave */
+    background: #fff;
     max-width: 1200px;
-    margin: 2rem auto;         /* centraliza e dá espaçamento acima/baixo */
-}
-
-.explicacao-metodos .titulo-secao {
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    color: #333;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 20px;
 }
 
 .bloco-explicacao {
-    background: #fff;          /* fundo branco para cada artigo */
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-    margin-bottom: 1.5rem;    /* espaço entre os blocos */
+    margin-bottom: 25px;
 }
 
 .titulo-bloco {
-    font-size: 1.3rem;
-    font-weight: 500;
-    margin-bottom: 0.75rem;
-    color: #28AE8F;            /* destaque verde */
+    color: #28AE8F;
+    margin-bottom: 10px;
 }
 
 .texto-explicacao {
-    font-size: 1rem;
-    line-height: 1.6;
     color: #555;
+    line-height: 1.6;
 }
 
+/* ===================== */
 /* RESPONSIVO */
+/* ===================== */
+
 @media (max-width: 768px) {
-    .explicacao-metodos {
-        padding: 1rem;
+
+    .wrapper-calculo {
+        flex-direction: column;
     }
 
-    .bloco-explicacao {
-        padding: 1rem;
-    }
-
-    .titulo-secao {
-        font-size: 1.5rem;
-    }
-
-    .titulo-bloco {
-        font-size: 1.1rem;
-    }
-
-    .texto-explicacao {
-        font-size: 0.95rem;
-    }
 }
