@@ -11,17 +11,11 @@ body {
     background: #f6f8f7;
     font-family: Poppins;
     height: 100vh;
-<<<<<<< Updated upstream
-    width: 100%;
-}
-
-=======
     width: 100vw;
 }
 
 /* Header */
 
->>>>>>> Stashed changes
 .header {
     background: white;
     min-height: 100px;
@@ -115,18 +109,6 @@ body {
     display: flex;
     flex-direction: column;
     flex: 1;
-<<<<<<< Updated upstream
-}
-
-.hero-conteudo-wrapper {
-    flex: 1.2;
-}
-
-.hero-imagem {
-    flex: 1;
-=======
-
->>>>>>> Stashed changes
 }
 
 .hero-imagem {
@@ -186,43 +168,17 @@ body {
     cursor: pointer;
 }
 
-<<<<<<< Updated upstream
-
-=======
 .btn-principal:hover {
     background: #5d6b63;
 }
 
 /* Funções */
->>>>>>> Stashed changes
 
 /* ===================== */
 /* SECTION */
 /* ===================== */
 
 .funcoes {
-<<<<<<< Updated upstream
-
-    padding: 120px 0;
-
-}
-
-
-.funcoes-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 90px;
-    align-items: start;
-}
-
-
-.secao-titulo {
-
-    font-family: 'Poppins';
-    font-size: 36px;
-    margin-bottom: 20px;
-
-=======
     width: 100%;
     padding: 4rem 0;
     background: linear-gradient(to right,
@@ -262,31 +218,11 @@ body {
 .secao-titulo {
     font-size: clamp(28px, 4vw, 40px);
     line-height: 1.2;
->>>>>>> Stashed changes
 }
 
 .secao-texto {
 
     color: #606060;
-<<<<<<< Updated upstream
-    max-width: 420px;
-    margin-bottom: 25px;
-
-}
-
-.funcoes-lista {
-
-    list-style: none;
-
-}
-
-.funcoes-lista li {
-
-    margin-bottom: 12px;
-
-}
-
-=======
     line-height: 1.5;
 }
 
@@ -321,38 +257,12 @@ body {
     border-radius: 50%;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
->>>>>>> Stashed changes
 
 /* ===================== */
 /* GRID (DIREITA) */
 /* ===================== */
 
 .funcoes-grid {
-<<<<<<< Updated upstream
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-}
-
-
-.funcoes-card {
-    background: #ffffff;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
-    border-radius: 14px;
-    padding: 28px;
-}
-
-.funcoes-card h3 {
-
-    font-family: 'Poppins';
-    font-size: 18px;
-    margin-bottom: 10px;
-
-}
-
-
-.funcoes-card p {
-=======
     flex: 1;
     display: flex;
     flex-wrap: wrap;
@@ -439,7 +349,6 @@ body {
         gap: 15px;
     }
 }
->>>>>>> Stashed changes
 
     color: #606060;
     font-size: 14px;
