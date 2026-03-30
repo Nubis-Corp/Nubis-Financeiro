@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações | Nubis Financeiro</title>
+    <script src="https://cdn.userway.org/widget.js" data-account="NwPL1sk2ks"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./../css/perfil.css">
+    <link rel="stylesheet" href="./../css/popup.css">
+    <link rel="stylesheet" href="./../css/style.css">
+    <link rel="stylesheet" href="./../css/header.css">
+    <link rel="shortcut icon" href="./../imagens/Nubis.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar container">
+            <div class="logo">
+                <a href="./../index.html">
+                    <img src="./../imagens/Nubis.png" alt="Logo da Nubis">
+                </a>
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="./tela_principal.html">Geral</a></li>
+                <li><a href="./metas.html">Metas</a></li>
+                <li><a href="./simulador.html">Simulador</a></li>
+                <li><a href="./planejador.html">Calculadora</a></li>
+                <li><button class="btn-notificacao" onclick="verNotificacoes()"><i class="fa-solid fa-bell"></i></button></li>
+                <li><button class="btn-perfil"><img src="./../imagens/usuario.png" alt="Foto de perfil"></button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="popup">
+        <div class="popup-caixa">
+            <header class="popup-header">
+                <div></div>
+                <h2 class="popup-titulo"></h2>
+                <button class="fechar" onclick="fecharPopup()">X</button>
+            </header>
+            <main class="popup-conteudo">
+            </main>
+        </div>
+    </div>
+
+    <div class="layout-wrapper">
+
+        <aside class="sidebar">
+            <nav class="menu-lateral">
+                <a href="#" data-section="perfil">Informações pessoais</a>
+                <a href="#" data-section="preferencias">Preferências</a>
+                <a href="#" data-section="assinatura">Assinatura</a>
+                <a href="#" data-section="privacidade">Privacidade e segurança</a>
+                <a href="#" data-section="ajuda" class="active" aria-current="page">Ajuda</a>
+
+                <button class="sair" onclick="sairConta()">Sair da conta</button>
+            </nav>
+        </aside>
+
+        <main class="content-area">
+        </main>
+    </div>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <script src="./../js/popup.js"></script>
+    <script src="./../js/perfil.js"></script>
+</body>
+
+</html>
+

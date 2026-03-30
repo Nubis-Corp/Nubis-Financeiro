@@ -1,0 +1,151 @@
+/* ===============================
+   Fundo escuro do popup
+=============================== */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none; /* ou usa .ativo */
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+
+.popup.ativo {
+    display: flex;
+    opacity: 1;
+}
+
+/* ===============================
+   Caixa do popup
+=============================== */
+.popup-caixa {
+    background: #fff;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 420px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    overflow: hidden;
+    max-height: 90vh;       /* altura máxima = 90% da viewport */
+    overflow-y: auto; 
+    display: flex;
+    flex-direction: column;
+    animation: popupAnim 0.25s ease-out;
+}
+
+@keyframes popupAnim {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* ===============================
+   Header do popup
+=============================== */
+.popup-header {
+    padding: 1rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f7f7f7;
+    border-bottom: 1px solid #ddd;
+}
+
+.popup-titulo {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.popup-header .fechar {
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.popup-header .fechar:hover {
+    color: #ff4d4d;
+}
+
+/* ===============================
+   Conteúdo do popup / Formulário
+=============================== */
+.popup-conteudo {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    font-size: 0.95rem;
+    color: #444;
+    text-align: center;
+}
+
+
+/* Labels */
+.popup-conteudo label {
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+}
+
+/* Inputs text, number e date */
+.popup-conteudo input[type="text"],
+.popup-conteudo input[type="number"],
+.popup-conteudo input[type="date"] {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    margin-bottom: 1rem;
+}
+
+.popup-conteudo input[type="text"]:focus,
+.popup-conteudo input[type="number"]:focus,
+.popup-conteudo input[type="date"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0,123,255,0.3);
+}
+
+/* Checkbox estilizado */
+.popup-conteudo input[type="checkbox"] {
+    margin-right: 6px;
+    transform: scale(1.1);
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+/* Botão de submit */
+.popup-conteudo button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #45BEA2;
+    color: white;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    transition: background-color 0.2s, transform 0.1s;
+    width: 100%;
+}
+
+.popup-conteudo button:hover {
+    background-color: #368a76;
+    transform: translateY(-1px);
+}
+
+/* ===============================
+   Responsividade
+=============================== */
+@media (max-width: 500px) {
+    .popup-caixa {
+        width: 95%;
+    }
+}

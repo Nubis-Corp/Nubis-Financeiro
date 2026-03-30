@@ -32,8 +32,12 @@
 
 /* Logo */
 .logo img {
-    height: 80px;
+    height: 50px;
     width: auto;
+}
+
+.a.active {
+    color: #28AE8F;
 }
 
 /* Menu */
@@ -48,13 +52,35 @@
     text-decoration: none;
     color: #384240;
     font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #28AE8F;
+}
+
+/* Efeito de sublinhado animado no menu topo */
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #28AE8F;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
 }
 
 /* Botão de notificação */
 .btn-notificacao {
     background: #384240;
     color: #fff;
-    padding: 10px;
+    width: 44px;
+    height: 44px;
     font-size: 20px;
     border-radius: 50%;
     border: none;

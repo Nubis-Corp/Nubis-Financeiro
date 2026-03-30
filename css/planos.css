@@ -1,72 +1,37 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
+/* Header */
+
+.nav-menu li:nth-child(2) a {
+    color: #28AE8F;
 }
 
-body {
-    background-color: #f9fbfb;
-    color: #333;
-    line-height: 1.6;
-}
+/* Hero */
 
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-
-.cabecalho {
-    background: #fff;
-    padding: 1rem 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
-.navbar {
+.hero-texto {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    color: #384240;
+    gap: 1rem;
 }
 
-.logo img {
-    height: 40px;
+.hero-texto h1 {
+    font-size: 50px;
+    padding: 0 0 0 2rem;
+    line-height: 1.2;
 }
 
-.nav-menu {
+.hero-texto p {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.hero-content {
     display: flex;
-    list-style: none;
-    gap: 2rem;
+    padding-bottom: 3rem;
 }
 
-.nav-menu a {
-    text-decoration: none;
-    color: #444;
-    font-weight: 600;
-    transition: 0.3s;
+.hero-circulos img {
+    max-width: 450px;
 }
-
-.nav-menu a:hover {
-    color: #00a896;
-}
-
-.btn-login {
-    background: transparent;
-    border: 2px solid #00a896;
-    color: #00a896;
-    padding: 0.5rem 1.5rem;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.btn-login:hover {
-    background: #00a896;
-    color: #fff;
-}
-
 
 .secao-planos {
     background: linear-gradient(135deg, #7ebca3 0%, #a9d29d 100%);
@@ -78,11 +43,10 @@ body {
 .titulo-planos {
     font-family: 'Poppins', sans-serif;
     font-size: 2.5rem;
-    margin-bottom: 1rem;
 }
 
 .subtitulo-planos {
-    font-size: 1.1rem;
+    font-size: 1.8rem;
     margin-bottom: 3rem;
     opacity: 0.9;
 }
@@ -98,8 +62,12 @@ body {
 .cartao-plano {
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(12px);
+    color: white;
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid rgba(255, 255, 255, 0.8);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.8);
     border-radius: 20px;
     padding: 40px;
     width: 320px;
@@ -168,7 +136,7 @@ body {
 .botao-experimente {
     display: block;
     background: #fff;
-    color: #00a896;
+    color: #28AE8F;
     text-decoration: none;
     padding: 12px;
     border-radius: 50px;
@@ -177,22 +145,22 @@ body {
 }
 
 .botao-experimente:hover {
-    background: #f0f0f0;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background: #28AE8F;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 
-.detalhes-funcionalidades, .seguranca {
-    padding: 80px 0;
-}
+
 
 .conteudo-flex {
     display: flex;
     align-items: center;
+    padding-top: 6rem;
     gap: 4rem;
 }
 
-.conteudo-flex > div {
+.conteudo-flex>div {
     flex: 1;
 }
 
@@ -207,39 +175,64 @@ body {
 
 .texto-bloco h2 {
     font-family: 'Poppins', sans-serif;
-    color: #00a896;
+    color: #28AE8F;
     font-size: 2rem;
     margin-bottom: 1.5rem;
 }
 
 .texto-bloco p {
     margin-bottom: 10px;
+
+}
+
+.texto-bloco-subtitulo {
+    font-weight: 700;
+    color: #384240;
 }
 
 .descricao-pequena {
     margin-top: 1rem;
     font-size: 0.85rem;
     color: #777;
+    font-weight: 500;
 }
 
 .imagem-bloco {
     flex: 1;
+    position: relative;
+}
+
+.seguranca {
+    padding-bottom: 6rem;
+}
+.margem {
+    margin-left: -3rem;
+}
+
+.direita {
+    text-align: end;
+}
+
+.imagem-bloco img {
+    width: calc(100% + 6rem);
+    display: block;
 }
 
 .img-figma {
-    width: 100%;
-    height: 300px;
+    max-height: 350px;
+    max-width: 600px;
     object-fit: cover;
     border-radius: 15px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
 
 @media (max-width: 768px) {
-    .conteudo-flex, .inverso {
+
+    .conteudo-flex,
+    .inverso {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .grade-planos {
         flex-direction: column;
         align-items: center;
@@ -248,7 +241,7 @@ body {
 
 
 .depoimentos {
-    background: linear-gradient(120deg, #bcd4c9, #a8cbb5);
+    background: linear-gradient(0deg, #bde3cf, #a8cbb5);
     padding: 60px 0;
 }
 
@@ -264,6 +257,10 @@ body {
     border-radius: 15px;
     width: 280px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .card-depoimento span {
@@ -280,7 +277,7 @@ body {
 
 .faq {
     padding: 80px 0;
-    background: #e6e6e6;
+    background: #f6f8f7;
 }
 
 .faq-container {
@@ -289,63 +286,65 @@ body {
     gap: 40px;
 }
 
+.faq-texto {
+    max-width: 500px;
+}
+
 .faq-texto h2 {
-    font-size: 28px;
+    font-size: 60px;
+    color: #384240;
+}
+
+.faq-texto p {
+    font-size: 30px;
 }
 
 .faq-perguntas {
-    width: 300px;
+    width: 500px;
 }
 
 .pergunta {
-    background: #f4f4f4;
-    padding: 15px;
+    gap: 2rem;
+    display: flex;
+    background: #ffffff;
+    padding: 45px;
+    min-height: 25px;
+    width: 100%;
     margin-bottom: 10px;
     border-radius: 10px;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+.faq-pergunta {
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.pergunta button {
+.faq-pergunta span {
+    max-width: 80%;
+}
+
+.faq-resposta {
+    display: none;
+    width: 100%;
+}
+
+.pergunta.ativa .faq-resposta {
+    display: block;
+}
+
+.faq-pergunta button {
     background: #28AE8F;
     color: white;
     border: none;
     border-radius: 50%;
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
 }
-
-
-.footer {
-    background: #dcdcdc;
-    padding: 40px 0;
-}
-
-.footer-grid {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.footer h4 {
-    margin-bottom: 10px;
-}
-
-.footer ul {
-    list-style: none;
-}
-
-.footer li {
-    margin-bottom: 5px;
-    font-size: 14px;
-}
-
-.footer-logo p {
-    font-size: 12px;
-    margin-top: 10px;
-}
-
 
 @media (max-width: 768px) {
     .depoimentos-grid {

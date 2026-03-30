@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="./../css/style.css">
     <link rel="stylesheet" href="./../css/header.css">
     <link rel="stylesheet" href="./../css/planejador.css">
+    <link rel="stylesheet" href="./../css/popup.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="shortcut icon" href="./../imagens/Nubis.png" type="image/x-icon">
+    <script src="https://cdn.userway.org/widget.js" data-account="NwPL1sk2ks"></script>
 </head>
 
 <body>
@@ -16,20 +19,35 @@
     <header class="header">
         <nav class="navbar container">
             <div class="logo">
-                <img src="./../imagens/Nubis.png" alt="Logo da Nubis">
+                <a href="./../index.html">
+                    <img src="./../imagens/Nubis.png" alt="Logo da Nubis">
+                </a>
             </div>
 
             <ul class="nav-menu">
                 <li><a href="./tela_principal.html">Geral</a></li>
                 <li><a href="./metas.html">Metas</a></li>
                 <li><a href="./simulador.html">Simulador</a></li>
-                <li><a href="#">Calculadora</a></li>
-                <li><button class="btn-notificacao"><i class="fa-solid fa-bell"></i></button></li>
-                <li><button class="btn-perfil"><img src="./../imagens/perfil.png"
-                            alt="Foto de perfil"></button></li>
+                <li><a href="#" class="a active">Calculadora</a></li>
+                <li><button class="btn-notificacao" onclick="verNotificacoes()"><i
+                            class="fa-solid fa-bell"></i></button></li>
+                <li><a href="./perfil.html"><button class="btn-perfil"><img src="./../imagens/usuario.png"
+                                alt="Foto de perfil"></button></a></li>
             </ul>
         </nav>
     </header>
+
+    <div class="popup">
+        <div class="popup-caixa">
+            <header class="popup-header">
+                <div></div>
+                <h2 class="popup-titulo"></h2>
+                <button class="fechar" onclick="fecharPopup()">X</button>
+            </header>
+            <main class="popup-conteudo">
+            </main>
+        </div>
+    </div>
 
     <main>
         <!-- CALCULADORA -->
@@ -44,7 +62,7 @@
 
                     <div class="grupo-input">
                         <label>Escolha um método</label>
-                        <select>
+                        <select id="metodoDivisao">
                             <option>50-30-20</option>
                             <option>60-20-20</option>
                             <option>70-20-10</option>
@@ -53,10 +71,10 @@
 
                     <div class="grupo-input">
                         <label>Insira seu salário</label>
-                        <input type="text" value="R$ 3000">
+                        <input type="text" id="salarioUsuario" value="R$ 3000">
                     </div>
 
-                    <button type="submit" class="botao-calcular">Calcular</button>
+                    <button class="botao-calcular">Calcular</button>
 
                 </form>
 
@@ -72,62 +90,15 @@
                     </div>
 
                     <ul class="lista-resultados">
-                        <li><span class="essencial-texto">Essencial (50%)</span> <span>R$ 1500</span></li>
-                        <li><span class="lazer-texto">Lazer (30%)</span> <span>R$ 900</span></li>
-                        <li><span class="poupanca-texto">Poupar (20%)</span> <span>R$ 600</span></li>
+                        <li><span class="essencial-texto">Essencial</span> <span>R$ 1500</span></li>
+                        <li><span class="lazer-texto">Lazer</span> <span>R$ 900</span></li>
+                        <li><span class="poupanca-texto">Poupar</span> <span>R$ 600</span></li>
                     </ul>
 
                 </div>
 
             </div>
 
-        </section>
-
-        <div class="grupo-input">
-            <label for="salario" class="rotulo-input">Insira seu salário</label>
-            <input type="text" id="salario" class="input-texto" value="R$ 3000">
-        </div>
-
-        <button type="submit" class="botao-calcular">Calcular</button>
-
-        </fieldset>
-
-        </form>
-
-        <!-- RESULTADO -->
-        <section class="resultado-calculo">
-
-            <h3 class="titulo-resultado">Resultado da divisão</h3>
-
-            <!-- barra com significado de progresso -->
-            <div class="barra-progresso" role="progressbar" aria-label="Distribuição da renda">
-                <div class="progresso essencial"></div>
-                <div class="progresso lazer"></div>
-                <div class="progresso poupanca"></div>
-            </div>
-
-            <!-- lista semântica -->
-            <ul class="lista-resultados">
-
-                <li class="item-resultado">
-                    <span class="nome-categoria">Essencial 50%</span>
-                    <span class="valor-categoria">R$ 1500,00</span>
-                </li>
-
-                <li class="item-resultado">
-                    <span class="nome-categoria">Lazer 30%</span>
-                    <span class="valor-categoria">R$ 900,00</span>
-                </li>
-
-                <li class="item-resultado">
-                    <span class="nome-categoria">Poupança 20%</span>
-                    <span class="valor-categoria">R$ 600,00</span>
-                </li>
-
-            </ul>
-
-        </section>
-        </div>
         </section>
 
         <!-- EXPLICAÇÃO -->
@@ -171,6 +142,19 @@
         </section>
 
     </main>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <script src="./../js/calculadora.js"></script>
+    <script src="./../js/popup.js"></script>
     <script src="./../js/footer.js"></script>
 </body>
 

@@ -17,6 +17,15 @@
     min-height: 100vh;
 }
 
+.voltar-botao {
+    color: #384240;
+    transition: 0.3s;
+}
+
+.voltar-botao:hover {
+    color: #28AE8F;
+}
+
 /* ========================= */
 /* PRIMEIRO BLOCO (HERO) */
 /* ========================= */
@@ -41,7 +50,8 @@
 }
 
 .login-logo {
-    max-width: 120px; /* melhor que % */
+    max-width: 120px;
+    /* melhor que % */
 }
 
 .login-titulo {
@@ -72,7 +82,8 @@
     padding: 3rem 3.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* melhor alinhamento */
+    justify-content: center;
+    /* melhor alinhamento */
     gap: 2rem;
 }
 
@@ -165,10 +176,29 @@
     font-size: 1.25rem;
     font-weight: 900;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     transition: 0.2s;
 }
 
 .login-botao:hover {
     background: #3aa88f;
+}
+
+.erro-msg {
+    color: #FF4D4F;
+    /* vermelho */
+    text-align: end;
+    font-size: 12px;
+    display: none;
+    /* começa escondido */
+}
+
+.olho {
+    position: absolute;
+    right: 10px;
+    top: 65%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    font-size: 18px;
 }

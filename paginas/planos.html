@@ -5,40 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nubis - Planos</title>
-
-
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Raleway:wght@400;500&display=swap"
         rel="stylesheet">
-
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="./../css/planos.css">
+    <link rel="shortcut icon" href="./../imagens/Nubis.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <script src="https://cdn.userway.org/widget.js" data-account="NwPL1sk2ks"></script>
 </head>
 
 <body>
 
-    <header class="cabecalho">
+    <header class="header">
         <nav class="navbar container">
 
-            <div class="logo">NUBIS</div>
+            <div class="logo">
+                <a href="./../index.html">
+                    <img src="./../imagens/logoNubis2.png" alt="Logo">
+                </a>
+            </div>
 
-            <ul class="nav-menu">
-                <li><a href="./../index.html">Sobre nós</a></li>
-                <li><a href="#">Planos</a></li>
-            </ul>
+            <div class="navbar-opcoes">
+                <ul class="nav-menu">
+                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="#">Planos</a></li>
+                </ul>
 
-            <a href="./login.html"><button class="btn-login">Entrar</button></a>
-
+                <a href="./login.html">
+                    <button class="btn-login">
+                        Entrar
+                    </button>
+                </a>
+            </div>
         </nav>
     </header>
 
     <main>
-
-
         <section class="hero">
-            <div class="container hero-content">
+            <div class="hero-content container">
 
                 <div class="hero-texto">
                     <h1>
-                        Comece a controlar seu dinheiro <span>hoje</span>
+                        Comece a controlar seu dinheiro <span class="destaque">hoje</span>
                     </h1>
 
                     <p>
@@ -46,7 +54,9 @@
                     </p>
                 </div>
 
-                <div class="hero-circulos"></div>
+                <div class="hero-circulos">
+                    <img src="./../imagens/Group 4.png" alt="Círculos transparentes">
+                </div>
 
             </div>
         </section>
@@ -70,7 +80,7 @@
                             <li><span class="icone-check"></span>Metas financeiras</li>
                             <li><span class="icone-check"></span>Relatórios básicos</li>
                         </ul>
-                        <a href="#" class="botao-experimente">Experimente</a>
+                        <a href="./login.html" class="botao-experimente">Experimente</a>
                     </div>
 
                     <div class="cartao-plano destaque">
@@ -85,7 +95,7 @@
                             <li><span class="icone-check"></span>Simulador de investimentos</li>
                             <li><span class="icone-check"></span>Suporte prioritário</li>
                         </ul>
-                        <a href="#" class="botao-experimente">Experimente</a>
+                        <a href="./login.html" class="botao-experimente">Experimente</a>
                     </div>
                 </div>
             </div>
@@ -95,81 +105,68 @@
             <div class="container conteudo-flex">
                 <div class="texto-bloco">
                     <h2>Organizar suas finanças não precisa ser complicado.</h2>
-                    <p>Com nossos planos, você pode acompanhar seus gastos, definir metas e visualizar seu progresso de
+                    <p class="texto-bloco-subtitulo">Com nossos planos, você pode acompanhar seus gastos, definir metas
+                        e visualizar seu progresso de
                         forma clara e simples.</p>
-                    <p class="descricao-pequena">Plataforma moderna e intuitiva feita para facilitar sua vida financeira
-                        no dia a dia.</p>
+                    <p class="descricao-pequena">Ao optar pelo plano premium da NUBIS, você deixa de apenas registrar
+                        seus gastos e passa a ter uma visão mais estratégica do seu dinheiro. Com recursos como
+                        relatórios detalhados, simulador de investimentos e múltiplas metas financeiras, fica muito mais
+                        fácil entender seus hábitos, tomar decisões mais conscientes e acelerar seus objetivos. Seja
+                        para sair das dívidas, organizar melhor sua renda ou começar a investir, a NUBIS ajuda você a
+                        transformar controle em progresso, trazendo mais segurança, clareza e resultados reais para sua
+                        vida financeira.
+                    </p>
                 </div>
                 <div class="imagem-bloco">
-                    <img src="/imagem/mulher-estudando.jpg" alt="Organização financeira" class="img-figma">
+                    <img src="./../imagens/mulher-estudando.jpg" alt="Organização financeira" class="img-figma">
                 </div>
             </div>
         </section>
 
         <section class="seguranca">
             <div class="container conteudo-flex">
-                <div class="texto-bloco">
+                <div class="texto-bloco direita">
                     <h2>Transparência total</h2>
-                    <p><strong>Seus dados sempre protegidos e seguros.</strong></p>
-                    <p>Utilizamos tecnologia de ponta para garantir a proteção e privacidade das suas informações
-                        conforme a LGPD.</p>
+                    <p class="texto-bloco-subtitulo"><strong>Seus dados sempre protegidos e seguros.</strong></p>
+                    <p class="descricao-pequena">Na NUBIS, a segurança dos seus dados é tratada como prioridade. Todas as informações são
+                        utilizadas exclusivamente para o funcionamento da plataforma, como organizar suas finanças,
+                        gerar relatórios e melhorar sua experiência. Os dados são armazenados com proteção e não são
+                        compartilhados sem sua autorização, seguindo as diretrizes da Lei Geral de Proteção de Dados
+                        (LGPD). Nosso objetivo é garantir que você tenha controle total sobre suas informações, com
+                        transparência e segurança em cada etapa do uso da plataforma.</p>
                 </div>
-                <div class="imagem-bloco">
-                    <img src="/imagem/profissional-seguranca.jpg" alt="Segurança de dados" class="img-figma">
+                <div class="imagem-bloco margem">
+                    <img src="./../imagens/profissional-seguranca.jpg" alt="Segurança de dados" class="img-figma">
                 </div>
             </div>
         </section>
-
-
-        <section class="conteudo inverso">
-            <div class="container flex">
-
-                <div>
-                    <h2>Transparência total</h2>
-
-                    <p><strong>Seus dados sempre protegidos e seguros.</strong></p>
-
-                    <p>
-                        Utilizamos tecnologia de ponta para garantir a proteção e privacidade das suas informações.
-                    </p>
-
-                </div>
-
-                <div class="img">
-                    <img src="/imagem/mulher-estudando.jpg" alt="Pessoa organizando finanças">
-                    <img src="/imagem/profissional-seguranca.jpg" alt="Pessoa organizando finanças">
-                </div>
-
-            </div>
-        </section>
-
 
         <section class="depoimentos">
             <div class="container depoimentos-grid">
 
                 <div class="card-depoimento">
                     <p>
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum."
+                        "Mudou minha vida"
                     </p>
-                    <span>- Fulano de Tal</span>
+                    <span>- Kevin</span>
 
                     <div class="estrelas">★★★★★</div>
                 </div>
 
                 <div class="card-depoimento">
                     <p>
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum."
+                        "Não sabia do potencial de simplesmente gerir finanças. Muito recompensador!"
                     </p>
-                    <span>- Fulano de Tal</span>
+                    <span>- Marli</span>
 
                     <div class="estrelas">★★★★★</div>
                 </div>
 
                 <div class="card-depoimento">
                     <p>
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum."
+                        "Não consigo parar de usar!"
                     </p>
-                    <span>- Fulano de Tal</span>
+                    <span>- Vitor </span>
 
                     <div class="estrelas">★★★★★</div>
                 </div>
@@ -189,18 +186,36 @@
                 <div class="faq-perguntas">
 
                     <div class="pergunta">
-                        <span>Pergunta</span>
-                        <button>✔</button>
+                        <div class="faq-pergunta">
+                            <span>O que é a Nubis?</span>
+                            <button><i class="fas fa-angle-down"></i></button>
+                        </div>
+                        <div class="faq-resposta">
+                            A NUBIS é uma plataforma que ajuda você a organizar suas finanças de forma simples e
+                            estratégica.
+                        </div>
                     </div>
 
                     <div class="pergunta">
-                        <span>Pergunta</span>
-                        <button>✔</button>
+                        <div class="faq-pergunta">
+                            <span>Como posso registrar minhas despesas e receitas?</span>
+                            <button><i class="fas fa-angle-down"></i></button>
+                        </div>
+                        <div class="faq-resposta">
+                            Você registra suas despesas e receitas e acompanha relatórios claros que mostram para onde
+                            seu dinheiro está indo.
+                        </div>
                     </div>
 
                     <div class="pergunta">
-                        <span>Pergunta</span>
-                        <button>✔</button>
+                        <div class="faq-pergunta">
+                            <span>Quais funcionalidades a Nubis oferece para controlar meu dinheiro?</span>
+                            <button><i class="fas fa-angle-down"></i></button>
+                        </div>
+                        <div class="faq-resposta">
+                            Relatórios detalhados, metas financeiras e simulador de investimentos para otimizar seu
+                            dinheiro.
+                        </div>
                     </div>
 
                 </div>
@@ -208,12 +223,82 @@
             </div>
         </section>
 
-        <!-- FOOTER -->
-<script src="./../js/footer.js"></script>
-</body>
-</html>
     </main>
+        <!-- FOOTER -->
+        <footer class="footer">
 
+        <div class="footer-container container">
+
+            <div class="footer-marca">
+                <img src="./imagens/Nubis.png" alt="Logo">
+                <h4 class="titulos">© 2026 Nubis™. Todos os direitos reservados.</h4>
+            </div>
+
+            <div class="footer-coluna">
+
+                <h3 class="titulos">Explorar</h3>
+
+                <ul>
+                    <li><a href="#">Saiba mais</a></li>
+                    <li><a href="./paginas/planos.html">Planos</a></li>
+                    <li><a href="./paginas/login.html">Login</a></li>
+                </ul>
+
+            </div>
+
+            <div class="footer-coluna">
+
+                <h3 class="titulos">Contato</h3>
+
+                <ul>
+                    <li><i class="fa fa-envelope"></i> <a
+                            href="https://mail.google.com/mail/?view=cm&fs=1&to=nubisfinancas@gmail.com"
+                            target="_blank">nubisfinancas@gmail.com</a></li>
+                </ul>
+
+            </div>
+
+            <div class="footer-coluna">
+
+                <h3 class="titulos">Redes sociais</h3>
+
+                <ul class="redes-sociais">
+                    <li><i class="fa-brands fa-x-twitter"></i><a href="https://twitter.com/nubisfinancas"
+                            target="_blank">@nubisfinancas</a></li>
+                    <li><i class="fa-brands fa-instagram"></i><a href="https://instagram.com/nubisfinancas"
+                            target="_blank">@nubisfinancas</a></li>
+                    <li><i class="fa-brands fa-youtube"></i><a href="https://www.youtube.com/@nubis_financas"
+                            target="_blank">Nubis Finanças</a></li>
+                </ul>
+
+            </div>
+
+            <div class="footer-coluna">
+
+                <h3 class="titulos">Legal</h3>
+
+                <ul>
+                    <li><a href="#">Política de privacidade</a></li>
+                    <li><a href="#">Termos de uso</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <script src="./../js/script.js"></script>
 </body>
 
 </html>

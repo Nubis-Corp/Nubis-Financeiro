@@ -4,30 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador</title>
+    <title>Simulador | Nubis Financeiro</title>
     <link rel="stylesheet" href="./../css/style.css">
     <link rel="stylesheet" href="./../css/header.css">
-    <link rel="stylesheet" href="./../css/simulador.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="./../css/popup.css">
+    <link rel="stylesheet" href="../css/simulador.css">
+    <link rel="shortcut icon" href="./../imagens/Nubis.png" type="image/x-icon">
+    <script src="https://cdn.userway.org/widget.js" data-account="NwPL1sk2ks"></script>
 </head>
 
 <body>
     <header class="header">
         <nav class="navbar container">
             <div class="logo">
-                <img src="./../imagens/Nubis.png" alt="Logo da Nubis">
+                <a href="./../index.html">
+                    <img src="./../imagens/Nubis.png" alt="Logo da Nubis">
+                </a>
             </div>
 
             <ul class="nav-menu">
                 <li><a href="./tela_principal.html">Geral</a></li>
                 <li><a href="./metas.html">Metas</a></li>
-                <li><a href="#">Simulador</a></li>
+                <li><a href="#" class="a active">Simulador</a></li>
                 <li><a href="./planejador.html">Calculadora</a></li>
-                <li><button class="btn-notificacao"><i class="fa-solid fa-bell"></i></button></li>
-                <li><button class="btn-perfil"><img src="./../imagens/perfil.png" alt="Foto de perfil"></button></li>
+                <li><button class="btn-notificacao" onclick="verNotificacoes()"><i
+                            class="fa-solid fa-bell"></i></button></li>
+                <li><a href="./perfil.html"><button class="btn-perfil"><img src="./../imagens/usuario.png"
+                                alt="Foto de perfil"></button></a></li>
             </ul>
         </nav>
     </header>
+
+    <div class="popup">
+        <div class="popup-caixa">
+            <header class="popup-header">
+                <div></div>
+                <h2 class="popup-titulo"></h2>
+                <button class="fechar" onclick="fecharPopup()">X</button>
+            </header>
+            <main class="popup-conteudo">
+            </main>
+        </div>
+    </div>
 
     <section class="simulacao-investimento">
         <h2 class="titulo-secao">Simule um investimento</h2>
@@ -165,49 +184,82 @@
             <p class="descricao-simulacao">Esses são os parâmetros padrão utilizados na sua simulação. Você pode
                 alterá-los e refazer os cálculos para uma simulação avançada.</p>
 
-            <button type="submit" class="botao-simular">Simular investimento</button>
+            <button class="botao-simular">Simular investimento</button>
         </form>
     </section>
+
     <section class="opcoes-investimento">
+
         <header class="cabecalho-secao">
             <h2 class="titulo-secao">Melhores opções de investimento</h2>
             <p class="subtitulo-secao">Valor líquido de resgate</p>
         </header>
+
         <div class="lista-investimentos">
+
             <article class="cartao-investimento">
                 <span class="nome-investimento">LCI e LCA</span>
-                <div class="valor-investimento"></div>
+                <div class="valor-investimento">
+                    <span class="barra-padrao" style="width: 80%"></span>
+                </div>
             </article>
+
             <article class="cartao-investimento">
                 <span class="nome-investimento">Tesouro Prefixado</span>
-                <div class="valor-investimento"></div>
+                <div class="valor-investimento">
+                    <span class="barra-padrao" style="width: 85%"></span>
+                </div>
             </article>
+
             <article class="cartao-investimento">
                 <span class="nome-investimento">CDB</span>
-                <div class="valor-investimento"></div>
+                <div class="valor-investimento">
+                    <span class="barra-padrao" style="width: 75%"></span>
+                </div>
             </article>
+
             <article class="cartao-investimento">
                 <span class="nome-investimento">Poupança</span>
-                <div class="valor-investimento"></div>
+                <div class="valor-investimento">
+                    <span class="barra-padrao" style="width: 70%"></span>
+                </div>
             </article>
+
             <article class="cartao-investimento">
                 <span class="nome-investimento">Tesouro Selic</span>
-                <div class="valor-investimento"></div>
+                <div class="valor-investimento">
+                    <span class="barra-padrao" style="width: 90%"></span>
+                </div>
             </article>
+
             <article class="cartao-investimento">
                 <span class="nome-investimento">Tesouro IPCA+</span>
-                <div class="valor-investimento"></div>
+                <div class="valor-investimento">
+                    <span class="barra-padrao" style="width: 88%"></span>
+                </div>
             </article>
+
             <article class="cartao-investimento">
                 <span class="nome-investimento">Fundo DI</span>
-                <div class="valor-investimento"></div>
+                <div class="valor-investimento">
+                    <span class="barra-padrao" style="width: 92%"></span>
+                </div>
             </article>
+
             <article class="cartao-investimento">
                 <span class="nome-investimento">Correção pelo IPCA</span>
-                <div class="valor-investimento"></div>
+                <div class="valor-investimento">
+                    <span class="barra-ipca" style="width: 95%"></span>
+                </div>
             </article>
+
         </div>
+
     </section>
+
+
+
+
 
     <section class="tabela-calculo">
         <h2 class="titulo-secao">Tabela de cálculo</h2>
@@ -248,34 +300,99 @@
 
             <tbody class="corpo-tabela">
                 <tr>
-                    <th scope="row" class="linha-indicador">Valor bruto acumulado</th>
-                    <td class="linha-valor">R$ 0,00</td>
-                    <td class="linha-valor">R$ 0,00</td>
-                    <td class="linha-valor">R$ 0,00</td>
-                    <td class="linha-valor">R$ 0,00</td>
-                    <td class="linha-valor">R$ 0,00</td>
-                    <td class="linha-valor">R$ 0,00</td>
-                    <td class="linha-valor">R$ 0,00</td>
-                </tr>
-                <!-- resto das linhas segue o mesmo padrão -->
-            </tbody>
 
-            <tfoot class="rodape-tabela">
-                <tr>
-                    <th scope="row" class="linha-indicador">Ganho líquido</th>
-                    <td class="linha-valor">R$ 0,00</td>
-                    <td class="linha-valor">R$ 0,00</td>
-                    <td class="linha-valor">R$ 0,00</td>
-                    <td class="linha-valor">R$ 0,00</td>
-                    <td class="linha-valor">R$ 0,00</td>
-                    <td class="linha-valor">R$ 0,00</td>
-                    <td class="linha-valor">R$ 0,00</td>
+                    <th>Valor bruto acumulado</th>
+                    <td></td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
                 </tr>
-            </tfoot>
+
+                <tr>
+                    <th>Rentabilidade bruta</th>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                </tr>
+
+                <tr>
+                    <th>Custos</th>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                </tr>
+
+                <tr>
+                    <th>Valor pago em IR</th>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                </tr>
+
+                <tr>
+                    <th>Valor líquido acumulado</th>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                </tr>
+
+                <tr>
+                    <th>Rentabilidade líquida</th>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                </tr>
+            </tbody>
+            <tr>
+                <tfoot>
+                    <th>ganho líquido</th>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 0,00</td>
+                </tfoot>
+            </tr>
         </table>
     </section>
+    <script src="./../js/simulador.js"></script>
+    <script src="./../js/popup.js"></script>
     <script src="./../js/footer.js"></script>
-
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
 
 </html>

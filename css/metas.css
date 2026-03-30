@@ -1,290 +1,335 @@
-/* ===================== */
-/* RESUMO DE METAS */
-/* ===================== */
+
+.metas-main {
+    padding-top: 3rem;
+}
+
+.secao-titulo {
+    font-size: 20px;
+    color: #2c3e50;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
 
 .metas-resumo {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
     background: #fff;
-    padding: 1rem;
-    gap: 1rem;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    padding: 2rem 3rem;
+    border-radius: 16px;
 }
 
-.metas-secundarias div {
+.metas-resumo header h2 {
+    color: #28AE8F;
+}
+
+.metas-resumo-cards {
     display: flex;
     gap: 2rem;
 }
 
-/* ===================== */
-/* CARD ADICIONAR META */
-/* ===================== */
-
-.meta-adicionar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    gap: 0.8rem;
-    text-align: center;
-    cursor: pointer;
-
-    /* mantém padrão dos outros cards */
-    background: #fff;
-    border-radius: 10px;
-    padding: 1.5rem;
-
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-
-    transition: 0.2s ease;
-}
-
-/* ícone central */
-.meta-adicionar i {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 40px;
-    height: 40px;
-
-    background: #28AE8F;
-    color: #fff;
-    border-radius: 50%;
-
-    font-size: 18px;
-}
-
-/* texto */
-.meta-adicionar-titulo {
-    font-size: 14px;
-    font-weight: 500;
-    color: #384240;
-}
-
-/* hover (fica muito mais profissional) */
-.meta-adicionar:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-}
-
-/* título ocupa linha inteira */
-.secao-titulo {
-    width: 100%;
-    text-align: center;
-}
-
-/* ===================== */
-/* CARDS */
-/* ===================== */
-
 .resumo-card {
-    flex: 1;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    position: relative;
+    background: #fff;
+    border-right: 1px solid #ddd;
+    padding-right: 2rem;
+    min-width: 200px;
 }
 
-/* linha vertical entre cards */
-.resumo-card:not(:last-child) {
-    border-right: 1px solid #D2D2D2;
+.titulo {
+    color: #888888;
+    margin: 2rem 0;
+    border-bottom: 1px solid #CACACA;
+    font-weight: 500;
 }
 
-/* linha horizontal abaixo do título */
 .resumo-titulo {
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid #D2D2D2;
+    font-weight: 400;
+    font-size: 14px;
+    color: #888;
 }
 
-/* valor */
 .resumo-valor {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #384240;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 5px;
+    color: #2c3e50;
 }
-
-/* ===================== */
-/* PROGRESSO */
-/* ===================== */
 
 .progresso-geral {
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
 }
 
-/* porcentagem */
 .progresso-porcentagem {
-    font-weight: 600;
-    font-size: 1rem;
+    font-size: 14px;
+    color: #00a896;
+    font-weight: bold;
 }
 
-/* barra */
 .barra-progresso {
-    height: 8px;
+    flex: 1;
+    width: 100%;
+    height: 15px;
     background: #ddd;
     border-radius: 10px;
     overflow: hidden;
 }
 
 .barra-preenchida {
+    width: 16%;
     height: 100%;
-    width: 16%; /* baseado no exemplo */
-    background: #28AE8F;
+    background: #00a896;
+    border-radius: 10px;
 }
 
 
+.metas-secundarias {
+    margin-bottom: 50px;
+}
 
-/* ===================== */
-/* META CARD */
-/* ===================== */
+.metas-secundarias .cards {
+    display: flex;
+}
 
 .meta-card {
+    width: 280px;
+    min-height: 325px;
     background: #fff;
-    border-radius: 10px;
-    padding: 1.2rem;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
     display: flex;
+    margin-right: 20px;
+    vertical-align: top;
     flex-direction: column;
-    gap: 1rem;
-
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-
-    /* 🔥 controle de tamanho */
-    max-width: 320px;
-    width: 100%;
 }
 
-/* ===================== */
-/* TÍTULO */
-/* ===================== */
+.meta-info-topo, .meta-info-progresso {
+    border-bottom: 1px solid #D2D2D2;
+}
+
+
 
 .meta-titulo {
-    position: relative;
-    padding-left: 10px;
-    font-size: 18px;
-}
-
-/* linha lateral igual aos outros */
-.meta-titulo::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 3px;
-    height: 70%;
-    background: #384240;
-    border-radius: 2px;
-}
-
-/* ===================== */
-/* INFOS (topo e progresso) */
-/* ===================== */
-
-.meta-info-topo,
-.meta-info-progresso,
-.meta-mensal {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-/* cada bloco de info */
-.meta-info {
-    display: flex;
-    justify-content: space-between;
-    gap: 2px;
-}
-
-/* label (texto menor) */
-.meta-label {
-    font-size: 12px;
-    color: #606060;
-}
-
-/* valor */
-.meta-valor {
-    font-weight: 600;
+    border-left: 4px solid #28AE8F;
+    padding-left: 1.5rem;
+    font-size: 16px;
+    margin-bottom: 15px;
     color: #384240;
 }
 
-/* ===================== */
-/* BARRA DE PROGRESSO */
-/* ===================== */
-
-.barra-progresso {
-    width: 100%;
-    height: 8px;
-    background: #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-top: 0.5rem;
+.meta-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 8px;
 }
 
-.barra-preenchida {
-    height: 100%;
-    width: 32%; /* baseado no exemplo (3200 / 10000) */
-    background: #28AE8F;
+.meta-label {
+    font-weight: 600;
+    color: #777;
 }
 
-/* ===================== */
-/* DIVISÃO VISUAL */
-/* ===================== */
+.meta-valor {
+    font-weight: 400;
+    color: #384240;
+}
 
-/* linha separando blocos */
+.meta {
+    color: #28AE8F;
+}
+
+.guardado {
+    color: #67A234;
+}
 .meta-info-progresso {
-    border-top: 1px solid #D2D2D2;
-    padding-top: 0.8rem;
+    padding: 1rem 0;
 }
+
+.meta-info-progresso .barra-preenchida {
+    width: 32%;
+    background: #8bc34a;
+}
+
 
 .meta-mensal {
-    border-top: 1px solid #D2D2D2;
-    padding-top: 0.8rem;
+    margin: 10px 0;
 }
 
-/* ===================== */
-/* AÇÕES */
-/* ===================== */
 
 .meta-acoes {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: auto;
+    gap: 1rem;
 }
 
-/* botão principal */
 .btn-adicionar-valor {
+    background: #28AE8F;
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    width: 100%;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.btn-adicionar-valor:hover {
+    background: #02897a;
+}
+
+.btn-opcoes {
+    width: 55px;
+    height: 35px;
+    border-radius: 50%;
+    background: #2c3e50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+
+.meta-adicionar {
+    background: #fff;
+    border-radius: 16px;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+    cursor: pointer;
+}
+
+.meta-adicionar i {
+    background-color: #28AE8F;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
-    gap: 8px;
-
-    background: none;
-    border: none;
-    cursor: pointer;
-
-    color: #384240;
-    font-weight: 500;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 800;
+}
+.meta-adicionar:hover {
+    transform: scale(1.02);
 }
 
-/* botão de opções */
-.btn-opcoes {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 6px;
-    border-radius: 6px;
+.icone-adicionar {
+    width: 60px;
+    height: 60px;
+    background: #00a896;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 15px;
 }
 
-.btn-opcoes:hover {
-    background: #f0f0f0;
+.icone-adicionar::before,
+.icone-adicionar::after {
+    content: "";
+    position: absolute;
+    background: white;
 }
 
+.icone-adicionar::before {
+    width: 20px;
+    height: 4px;
+    top: 28px;
+    left: 20px;
+}
+
+.icone-adicionar::after {
+    width: 4px;
+    height: 20px;
+    top: 20px;
+    left: 28px;
+}
+
+.meta-adicionar-titulo {
+    color: #00a896;
+    text-align: center;
+    font-weight: 600;
+}
+
+
+.resumo-card:last-child {
+    border-right: none;
+}
+
+
+/* ===== FOOTER ===== */
+.dashboard-footer {
+    background: #e6e6e6;
+    padding: 40px;
+    margin-top: 40px;
+}
+
+.dashboard-footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* LOGO + TEXTO */
+.dashboard-footer-marca img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.dashboard-footer-marca h4 {
+    font-size: 12px;
+    color: #666;
+}
+
+/* COLUNAS */
+.dashboard-footer-coluna {
+    min-width: 150px;
+}
+
+.footer-titulo {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.footer-lista {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-lista li {
+    margin-bottom: 6px;
+    font-size: 13px;
+}
+
+.footer-lista a {
+    text-decoration: none;
+    color: #555;
+    transition: 0.3s;
+}
+
+.footer-lista a:hover {
+    color: #00a896;
+}
+
+
+@media (max-width: 768px) {
+
+    .metas-resumo {
+        flex-direction: column;
+    }
+
+    .meta-card,
+    .meta-adicionar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+}

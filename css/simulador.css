@@ -6,13 +6,6 @@
     box-sizing: border-box;
 }
 
-body {
-    background: #f9fbfb;
-    color: #333;
-    line-height: 1.6;
-    min-height: 100vh;
-}
-
 /* ===================== */
 /* TÍTULOS DE SEÇÃO */
 .titulo-secao {
@@ -73,6 +66,28 @@ body {
     align-items: center;
     gap: 0.5rem;
 }
+/* INPUT cresce corretamente */
+.controle-periodo input,
+.controle-stepper input,
+.controle-selecao input {
+    flex: 1;
+    min-width: 0;
+}
+
+/* BOTÕES não deformam */
+.botao-aumentar,
+.botao-diminuir {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+}
+
+/* SELECT não fica espremido */
+.selecao-periodo,
+.selecao-cdi {
+    flex-shrink: 0;
+    min-width: 80px;
+}
 
 .botao-aumentar, .botao-diminuir {
     background: #28AE8F;
@@ -123,35 +138,32 @@ body {
 /* ===================== */
 /* OPÇÕES DE INVESTIMENTO */
 .opcoes-investimento {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 2rem auto;
 }
 
 .lista-investimentos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 4rem;
 }
 
 .cartao-investimento {
-    background: #fff;
-    padding: 1rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.cartao-investimento:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    transition: 0.2s;
 }
 
 .nome-investimento {
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-}
-
-.valor-investimento {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #28AE8F;
+   margin-bottom: 6px;
+   font-size: 1rem;
 }
 
 /* ===================== */
@@ -188,22 +200,99 @@ body {
     color: #28AE8F;
 }
 
+.valor-investimento {
+    width: 100%;
+    height: 14px;
+    background: #e8f5f1;
+    border-radius: 20px;
+    margin-top: 8px;
+    
+}
+
+.valor-investimento span {
+    height: 100%;
+    display: block;
+    border-radius: 20px;
+}
+.barra-padrao {
+    background:#28AE8F
+}
+
+.barra-ipca {
+    background: linear-gradient(90deg, #8BC34A, #4CAF50);
+}
+
+.lista-investimentos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 40px;
+}
+
+.cartao-investimento {
+    display: flex;
+    flex-direction: column;
+}
+
+
 .tabela-investimentos {
     width: 100%;
     border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* CABEÇALHO */
+.tabela-investimentos thead th {
+    background: #28AE8F;
+    color: white;
+    padding: 1rem;
+    font-weight: 600;
+    border: none;
+}
+
+/* PRIMEIRA COLUNA */
+.tabela-investimentos tbody th {
+    background: #2f8f7f;
+    color: white;
+    padding: 1rem;
     text-align: left;
+    border: none;
 }
 
-.tabela-investimentos th, .tabela-investimentos td {
-    padding: 0.8rem;
-    border: 1px solid #ddd;
+/* CÉLULAS */
+.tabela-investimentos td {
+    padding: 1rem;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid #eee;
 }
 
-.tabela-investimentos th {
-    background: #f2f2f2;
-    color: #333;
+/* RODAPÉ */
+.tabela-investimentos tfoot th {
+    background: #2f8f7f;
+    color: white;
+    padding: 1rem;
+    border: none;
 }
 
+.tabela-investimentos tfoot td {
+    font-weight: bold;
+    border-top: 2px solid #28AE8F;
+}
+
+.tabela-investimentos tfoot tr {
+    background: #e8f5f1;
+}
+
+.tabela-investimentos tfoot td {
+    color: #28AE8F;
+    font-weight: 600;
+}
+
+.tabela-investimentos tfoot th {
+    background: #2f8f7f;
+    color: white;
+}
 .linha-valor {
     color: #28AE8F;
 }
@@ -241,4 +330,179 @@ body {
         overflow-x: auto;
         white-space: nowrap;
     }
+}
+
+/* ============================= */
+
+
+body {
+    background: #f5f7f6;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* centralização geral */
+.simulacao-investimento,
+.opcoes-investimento,
+.tabela-calculo {
+    max-width: 1100px;
+}
+
+
+.simulacao-investimento {
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+}
+
+/* ============================= */
+
+.input-texto,
+.input-numero,
+.selecao-periodo,
+.selecao-cdi {
+    padding: 0.75rem 0.9rem;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+}
+
+.input-texto:focus,
+.input-numero:focus {
+    border-color: #28AE8F;
+    box-shadow: 0 0 0 2px rgba(40,174,143,0.1);
+}
+
+/* ============================= */
+/* BOTÃO PRINCIPAL (FIGMA STYLE) */
+.botao-simular {
+    padding: 1rem;
+    border-radius: 999px;
+    font-size: 1.1rem;
+    background: linear-gradient(90deg, #28AE8F, #1f8e72);
+}
+
+
+.botao-aumentar,
+.botao-diminuir {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+}
+
+.cartao-investimento {
+    align-items: flex-start;
+}
+
+
+.resumo-item {
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+
+.tabela-investimentos {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.tabela-investimentos th {
+    background: #28AE8F;
+    color: white;
+}
+
+
+/* ESPAÇAMENTO GERAL */
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+    background: #EDF4F2; 
+    border: 2px solid #28AE8F; 
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.grupo-input input{
+border: none;
+background-color: transparent;
+outline: none;
+}
+.titulo-secao {
+    margin-bottom: 1.5rem;
+}
+
+
+
+.grupo-taxa-selic {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+/* ============================= */
+/* GRID TOPO (DADOS DO INVESTIMENTO) */
+
+.grupo-investimento {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.grupo-investimento .grupo-input {
+    background: #EDF4F2;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid #A1CE7A;
+}
+
+/* cada campo vira um "card" */
+.grupo-taxa-selic .grupo-input {
+    background: #EDF4F2;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid #28AE8F;
+}
+
+/* cabeçalho alinhado */
+.cabecalho-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+
+.grupo-taxa-selic .input-texto {
+    border: none;
+    background: transparent;
+    padding-left: 0;
+}
+/* ============================= */
+/* GRID OUTRAS TAXAS */
+
+.grupo-outras-taxas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+/* vira card igual os de cima */
+.grupo-outras-taxas .grupo-input {
+    background: #EDF4F2;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid #28AE8F;
+}
+
+/* inputs mais limpos */
+.grupo-outras-taxas .input-texto {
+    border: none;
+    background: transparent;
+}
+
+.cartao-investimento {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }

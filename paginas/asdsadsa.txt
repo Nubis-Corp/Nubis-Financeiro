@@ -1,0 +1,273 @@
+<!-- Perfil -->
+<section class="perfil-container">
+    <div class="informacoes-pessoais">
+        <div class="foto-perfil">
+            <figure class="imagem-perfil">
+                <img src="" alt="Foto de perfil do usuário">
+                <figcaption>Usuário</figcaption>
+            </figure>
+        </div>
+        <div class="informacoes">
+            <dl>
+                <dt>Nome</dt>
+                <dd>Fulano de Tal</dd>
+
+                <dt>Data de Nascimento</dt>
+                <dd>00/00/0000</dd>
+
+                <dt>E-mail</dt>
+                <dd>fulaninho@gmail.com</dd>
+
+                <dt>Telefone</dt>
+                <dd>+00 (00) 00000-0000</dd>
+
+                <dt>CPF</dt>
+                <dd>000.000.000-00</dd>
+            </dl>
+        </div>
+
+        <div class="info-clicks">
+            <button type="button">Editar</button>
+            <a href="#">Como usamos esses dados?</a>
+        </div>
+    </div>
+</section>
+
+<section class="perfil-container">
+    <form class="informacoes-pessoais">
+        <div class="foto-perfil">
+            <figure class="imagem-perfil">
+                <img src="" alt="Foto de perfil do usuário">
+            </figure>
+            <button class="alterar-foto-perfil">
+                <i class="fas fa-camera"></i>
+            </button>
+        </div>
+        <fieldset class="campos">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome">
+
+            <label for="data-nascimento">Data de nascimento</label>
+            <input type="date" name="data-nascimento" id="data-nascimento">
+
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email">
+
+            <label for="telefone">Telefone</label>
+            <input type="text" name="telefone" id="telefone">
+
+            <label for="cpf">CPF</label>
+            <input type="text" name="cpf" id="cpf">
+        </fieldset>
+        <div class="form-clicks">
+            <button type="submit">Editar</button>
+            <a href="#">Como usamos esses dados?</a>
+        </div>
+    </form>
+</section>
+
+<!-- Preferências -->
+<section class="perfil-container">
+    <form class="preferencias">
+        <fieldset class="form-visual">
+            <legend>Modos</legend>
+
+            <div class="opcao">
+                <label for="modo-escuro">Modo escuro</label>
+                <input type="checkbox" name="modo-escuro" id="modo-escuro">
+                <span class="checkbox-personalizado"></span>
+            </div>
+        </fieldset>
+        <fieldset class="form-acessibilidade">
+            <legend>Acessibilidade</legend>
+
+            <div class="opcao">
+                <label for="tamanho-fonte">Tamanho da fonte</label>
+                <div class="acessibilidade-opcoes">
+                    <button class="aumentar-fonte">+</button>
+                    <button class="diminuir-fonte">-</button>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="notificacoes">
+            <legend>Notificações</legend>
+
+            <div class="opcao">
+                <label for="ativar-notificacoes">Receber notificações e novidades por e-mail</label>
+                <input type="checkbox" name="ativar-notificacoes" id="ativar-notificacoes">
+                <span class="checkbox-personalizado"></span>
+            </div>
+
+            <div class="opcao">
+                <label for="som-notificacoes">Ativar som ao receber notificações</label>
+                <input type="checkbox" name="som-notificacoes" id="som-notificacoes">
+                <span class="checkbox-personalizado"></span>
+            </div>
+        </fieldset>
+    </form>
+</section>
+
+<!-- Assinatura -->
+<section class="perfil-container">
+    <div class="planos">
+        <h2>Plano</h2>
+        <dl>
+            <dt>Plano atual</dt>
+            <dd>Plano Essencial</dd>
+
+            <dt>Valor mensal</dt>
+            <dd>R$XX,XX</dd>
+
+            <dt>Próxima cobrança</dt>
+            <dd>15/04/2026</dd>
+        </dl>
+    </div>
+    <div class="cobrancas">
+        <header>
+            <h2>Cobrança</h2>
+            <button>Ver dados do cartão cadastrado <i class="fas fa-lock"></i></button>
+        </header>
+        <dl>
+            <dt>Bandeira</dt>
+            <dd>Mastercard</dd>
+
+            <dt>Número</dt>
+            <dd>*** *** *** ***</dd>
+
+            <dt>Titular</dt>
+            <dd>Fulano de Tal</dd>
+
+            <dt>Validade</dt>
+            <dd>08/27</dd>
+        </dl>
+        <button class="alterar-cartao" type="button">Alterar cartão</button>
+        <form class="form-cobranca">
+            <div class="opcao">
+                <label for="ativar-cobranca">Ativar cobrança automática no cartão</label>
+                <input type="checkbox" name="ativar-cobranca" id="ativar-cobranca">
+                <span class="checkbox-personalizado"></span>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- Segurança e privacidade -->
+<section class="perfil-container">
+    <form action="" class="privacidade-e-seguranca">
+        <fieldset class="seguranca">
+            <legend>Segurança da conta</legend>
+            <dl>
+                <dt>Senha</dt>
+                <dd>********</dd>
+            </dl>
+            <button class="alterar-senha" type="button">Alterar senha</button>
+            <div class="opcao">
+                <label for="verificacao-duas-etapas">Verificação em duas etapas</label>
+                <input type="checkbox" name="verificacao-duas-etapas" id="verificacao-duas-etapas">
+                <span class="checkbox-personalizado"></span>
+            </div>
+        </fieldset>
+        <fieldset class="privacidade">
+            <legend>Privacidade de dados</legend>
+            <div class="opcao">
+                <label for="uso-dados">Permitir uso de dados para melhorar o serviço</label>
+                <input type="checkbox" name="uso-dados" id="uso-dados">
+                <span class="checkbox-personalizado"></span>
+            </div>
+
+            <div class="opcao">
+                <label for="uso-anonimo-dados">Compartilhar dados anonimizados para análise</label>
+                <input type="checkbox" name="uso-anonimo-dados" id="uso-anonimo-dados">
+                <span class="checkbox-personalizado"></span>
+            </div>
+        </fieldset>
+        <fieldset class="alertas">
+            <legend>Alertas de segurança</legend>
+            <div class="opcao">
+                <label for="avisar-login">Avisar quando houver login em novo dispositivo</label>
+                <input type="checkbox" name="avisar-login" id="avisar-login">
+                <span class="checkbox-personalizado"></span>
+            </div>
+            <div class="opcao">
+                <label for="avisar-senha">Avisar quando senha for alterada</label>
+                <input type="checkbox" name="avisar-senha" id="avisar-senha">
+                <span class="checkbox-personalizado"></span>
+            </div>
+        </fieldset>
+        <fieldset class="excluir-conta">
+            <legend>Excluir conta</legend>
+            <div class="opcao">
+                <span>Remover permanentemente sua conta e todos os dados.</span>
+                <button class="excluir-conta" type="button">Excluir conta</button>
+            </div>
+        </fieldset>
+    </form>
+    <a href="#">Leia nossos Termos de Uso e Condições</a>
+</section>
+
+<!-- FAQ -->
+<div class="ajuda">
+
+    <section class="perguntas-frequentes">
+        <h2>Perguntas frequentes</h2>
+
+        <div class="faq-lista">
+            <details class="faq-item" name="faq">
+                <summary>
+                    Como adicionar gastos?
+                    <span class="faq-icon"></span>
+                </summary>
+                <p>Para adicionar gastos, vá até a aba "Geral" ou "Simulador" e clique no botão de nova transação.</p>
+            </details>
+
+            <details class="faq-item" name="faq">
+                <summary>
+                    Como adicionar gastos?
+                    <span class="faq-icon"></span>
+                </summary>
+                <p>Conteúdo de exemplo para a segunda pergunta.</p>
+            </details>
+
+            <details class="faq-item" name="faq">
+                <summary>
+                    Como funciona o simulador?
+                    <span class="faq-icon"></span>
+                </summary>
+                <p>O simulador permite prever seus saldos futuros com base nas suas rendas e despesas fixas.</p>
+            </details>
+        </div>
+    </section>
+
+    <section class="guia-rapido">
+        <h2>Guia rápido</h2>
+
+        <div class="cards-grid">
+            <article class="card">
+                <h3>Como organizar suas finanças no Nubis</h3>
+                <ol>
+                    <li>Adicione seu salário</li>
+                    <li>Cadastre suas contas fixas</li>
+                    <li>Registre seus gastos</li>
+                    <li>Crie metas financeiras</li>
+                </ol>
+            </article>
+
+            <article class="card">
+                <h3>Regra 50-30-20</h3>
+                <p class="regra-texto">50% necessidades<br>30% lazer<br>20% poupança</p>
+                <p class="obs">Você também pode usar outros valores (%)</p>
+            </article>
+
+            <article class="card">
+                <h3>O que é saldo disponível?</h3>
+                <p>Saldo disponível é o dinheiro que resta após pagar suas contas e registrar seus gastos.</p>
+            </article>
+
+            <article class="card">
+                <h3>Exemplo 4</h3>
+                <p class="placeholder-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                    tempor incididunt ut labore.</p>
+            </article>
+        </div>
+    </section>
+</div>

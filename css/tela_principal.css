@@ -9,7 +9,6 @@
 }
 
 body {
-    background: #f9fbfb;
     color: #333;
 
     min-height: 100vh;
@@ -20,6 +19,7 @@ body {
 /* ===================== */
 /* MAIN */
 /* ===================== */
+
 
 .dashboard {
     flex: 1;
@@ -33,124 +33,146 @@ body {
     margin-bottom: 3rem;
 }
 
-/* ===================== */
-/* HEADER */
-/* ===================== */
-
-.topo {
-    background: #fff;
-    padding: 10px 20px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.menu {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    list-style: none;
-}
-
-.menu a {
-    text-decoration: none;
-    color: #555;
-    font-weight: 600;
-}
-
-.menu a:hover {
-    color: #28AE8F;
-}
-
-/* perfil */
-
-.btn-perfil {
-    padding: 0;
-    background: none;
-    border: none;
-}
-
-.btn-perfil img {
-    display: block;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-
-/* ===================== */
-/* RESUMO FINANCEIRO */
-/* ===================== */
-
 .resumo-financeiro {
+    margin-top: 1rem;
     display: flex;
-    flex-wrap: wrap;
     background: #fff;
-    padding: 1rem;
-    gap: 1rem;
+    justify-content: space-evenly;
+    align-items: stretch;
+    padding: 2rem 2rem;
+    flex-wrap: wrap;
     border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
 }
 
 .resumo-header {
-    width: 100%;
-    text-align: center;
+    padding-right: 2rem;
+}
+
+.resumo-header h1 {
+    font-size: 25px;
+    color: #384240;
+}
+
+.resumo-header p {
+    font-size: 14px;
+    color: #777;
+    font-weight: 700;
+}
+
+.resumo-financeiro div:nth-child(2){
+    border-left: 1px solid #D2D2D2;
 }
 
 .card-resumo {
     flex: 1;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
     border-right: 1px solid #D2D2D2;
-}
-
-.card-resumo:last-child {
-    border-right: none;
+    font-size: 12px;
+    padding: 0 1rem;
+    min-height: 90px;
+    width: 200px;
 }
 
 .lista-resumo {
     list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    margin-top: 10px;
 }
 
 .lista-resumo li {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 5px;
 }
 
-.total {
+.lista-resumo .total {
     font-weight: bold;
 }
 
-.entradas { color: #28AE8F; }
-.saidas { color: #EB3507; }
-.saldo { color: #28AE8F; }
+.lista-resumo input {
+    width: 48%;
+    box-sizing: border-box;
+    font-size: 12px;
+}
 
-/* barra saldo */
+.card-botoes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.btn-add, .btn-salvar {
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.3rem;
+}
+
+.btn-add {
+    background: #384240;
+}
+.btn-salvar {
+    background: #28AE8F;
+}
+
+.entradas {
+    color: #28AE8F;
+}
+
+.saidas {
+    color: #ff5c5c;
+}
+
+.saldo {
+    color: #67A234;
+}
+
+.pendentes {
+    color: #EB3507;
+}
+
 
 .barra-saldo {
-    height: 8px;
-    background: #ddd;
+    background: #eee;
+    height: 15px;
     border-radius: 10px;
-    overflow: hidden;
+    margin: 10px 0;
 }
 
 .progresso-saldo {
+    width: 60%;
     height: 100%;
-    width: 50%;
-    background: #28AE8F;
+    background: #67A234;
+    border-radius: 10px;
+}
+
+.legenda-saldo {
+    display: flex;
+    justify-content: space-between;
+    font-size: 8px;
 }
 
 /* ===================== */
 /* GASTOS */
 /* ===================== */
+
+
+.titulo-secao {
+    color: #888888;
+}
+
+.header-secao {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3rem;
+    gap: 1rem;
+}
+
+.header-secao div {
+    color: #888888;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
 
 .grid-gastos-principais {
     display: grid;
@@ -167,19 +189,105 @@ body {
 
 .card-gasto {
     background: #fff;
-    border-radius: 10px;
-    padding: 1rem;
+    border-radius: 20px;
+    padding: 2rem;
+    border: none;
     min-height: 150px;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
+
+.card-gasto input {
+    width: 100%;           /* ocupa toda a largura disponível do li */
+    box-sizing: border-box; /* inclui padding e border na largura */
+    padding: 0.3rem;       /* espaçamento interno */
+    font-size: 12px;
+    margin-bottom: 5px;    /* espaçamento entre inputs */
+}
+
 
 .card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid #D2D2D2;
+}
+
+.card-header-gastos {
+    border-left: 4px solid #28AE8F;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1rem;
+    margin-bottom: 0.7rem;
+    align-items: center;
+}
+
+.info {
+    background: transparent;
+    color: #606060;
+    cursor: pointer;
+    border: 2px solid #606060;
+    border-radius: 50%;
+    width: 17px;
+    height: 17px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
+
+.btn-opcao {
+    background: #fff;
+    border: none;
+    cursor: pointer;
+}
+.checkbox-customizada {
+    padding: 0.3rem 0;
+}
+.checkbox-customizada input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checado {
+    color: #28AE8F;
+}
+
+.checkbox-customizada .checkmark {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  display: inline-block;
+  border: 1px solid #45BEA2;
+  vertical-align: middle;
+  margin-right: 10px;
+  transition: 0.2s;
+}
+
+.checkbox-customizada input:checked + .checkmark {
+  background-color: #45BEA2;
+}
+
+.checkbox-customizada .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-customizada input:checked + .checkmark::after {
+  display: block;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
 
 .lista-gastos {
@@ -190,15 +298,15 @@ body {
 }
 
 .item-gasto {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding-bottom: 8px;
     border-bottom: 1px solid #D2D2D2;
 }
 
-.item-gasto:last-child {
-    border-bottom: none;
+.item-principal {
+    gap: 10px;
+    padding-bottom: 8px;
+    display: flex;
+    width: 100%;
+    align-items: center;
 }
 
 .valor {
@@ -215,21 +323,58 @@ body {
     margin-top: auto;
     display: flex;
     align-items: center;
+    color: #384240;
     gap: 8px;
     background: none;
     border: none;
     cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 0.7px;
 }
 
 .btn-adicionar i {
-    width: 28px;
-    height: 28px;
+    width: 25px;
+    height: 25px;
     background: #384240;
     color: #fff;
     border-radius: 50%;
     display: flex;
     align-items: center;
+    font-weight: bold;
     justify-content: center;
+}
+
+.item-descricao {
+    padding: 5px 10px;
+  font-size: 13px;
+  color: #555;
+  border-left: 2px solid #ccc;
+  margin-top: 2px;
+  margin-bottom: 15px;
+  display: none;
+}
+
+.item-descricao ul {
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.item-descricao ul li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-botao {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem;
+    background: #28AE8F;
+    color: #fff;
+    cursor: pointer;
 }
 
 /* ===================== */
@@ -240,17 +385,27 @@ body {
     display: flex;
     flex-direction: column;
 }
+.cartoes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
 
 .card-cartao {
     background: #fff;
-    padding: 1rem;
+    padding: 1.5rem 2rem;
     border-radius: 10px;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
     margin-top: 1rem;
 }
 
 .cartao-header {
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid #28AE8F;
+    padding-bottom: 0.5rem;
 }
 
 .info-cartao {
@@ -259,9 +414,39 @@ body {
 
 .info-cartao li {
     display: flex;
+    padding-bottom: 0.5rem;
     justify-content: space-between;
 }
 
+.limite {
+    color: #28AE8F;
+}
+
+.usado {
+    color: #EB3507;
+}
+
+.adicionar {
+    max-width: 150px;
+    cursor: pointer;
+}
+
+.btn-novo-cartao {
+    color: #28AE8F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 20px;
+}
+
+.btn-novo-cartao i {
+    background: #28AE8F;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+}
 /* ===================== */
 /* ANÁLISE */
 /* ===================== */
@@ -272,13 +457,69 @@ body {
 }
 
 .card-grafico {
-    background: #fff;
-    padding: 1rem;
-    border-radius: 10px;
-    margin-top: 1rem;
-    min-height: 250px;
+    max-height: 500px;
+    height: auto;
+    padding: 4rem 4rem;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
+.rosca {
+    width: 400px;
+}
+
+#grafico-categorias {
+    max-height: 250px;
+    max-width: 250px;
+}
+
+.barras {
+    width: 700px;
+}
+
+.card-grafico h3 {
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+.legenda-grafico {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin-top: 15px;
+    justify-content: space-evenly;
+    text-align: left;
+}
+
+.legenda-grafico li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.legenda-grafico .cor {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.graficos {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    width: 100%;
+}
 /* ===================== */
 /* FOOTER */
 /* ===================== */
@@ -306,4 +547,15 @@ body {
     .grid-gastos-principais {
         grid-template-columns: 1fr;
     }
+}
+
+/* Etc */
+.card-header button, .cartao-header button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.card-header button {
+    color: #28AE8F;
 }

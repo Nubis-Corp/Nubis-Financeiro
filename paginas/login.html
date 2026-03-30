@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./../css/style.css">
     <link rel="stylesheet" href="./../css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <script src="https://cdn.userway.org/widget.js" data-account="NwPL1sk2ks"></script>
+    <link rel="shortcut icon" href="./../imagens/Nubis.png" type="image/x-icon">
 </head>
 
 <body>
@@ -51,7 +53,7 @@
                 <img src="./../imagens/Nubis.png" alt="Logo" class="painel-logo">
             </header>
 
-            <form class="login-form" action="">
+            <form class="login-form" id="loginForm">
 
                 <div class="form-cabecalho">
                     <h2 class="form-titulo">Bem-vindo(a) de volta!</h2>
@@ -67,14 +69,19 @@
                         <input type="email" name="email" id="email" placeholder="Insira seu e-mail">
                     </div>
 
-                    <div class="form-campo">
+                    <div class="form-campo" style="position: relative;">
                         <label for="senha">Senha</label>
+                        
                         <input type="password" name="senha" id="senha" placeholder="Insira sua senha">
+                        <span class="olho" id="ativarSenha"><i class="fa-solid fa-eye"></i></span>
                     </div>
+                    <!-- <i class="fa-solid fa-eye-slash"></i> -->
+                    <div id="erro" class="erro-msg"></div>
 
-                    <a href="./tela_principal.html" class="esqueci-senha">
+                    <a href="#" class="esqueci-senha">
                         Esqueceu sua senha?
                     </a>
+
                 </div>
 
                 <div class="form-conta">
@@ -92,8 +99,20 @@
 
         </section>
 
+
     </main>
-<script src="./../js/footer.js"></script>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <script src="./../js/login.js"></script>
 </body>
 
 </html>
