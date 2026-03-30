@@ -139,7 +139,9 @@
 /* OPÇÕES DE INVESTIMENTO */
 .opcoes-investimento {
     max-width: 1100px;
-    margin: 2rem auto;
+    background-color: #fff;
+    padding: 3rem;
+    border-radius: 10px;
 }
 
 .lista-investimentos {
@@ -304,6 +306,9 @@
     font-size: 1.1rem;
 }
 
+.subtitulo-secao {
+    margin-bottom: 1.5rem;
+}
 /* ===================== */
 /* RESPONSIVO */
 @media (max-width: 768px) {
@@ -428,11 +433,6 @@ border: none;
 background-color: transparent;
 outline: none;
 }
-.titulo-secao {
-    margin-bottom: 1.5rem;
-}
-
-
 
 .grupo-taxa-selic {
     display: grid;

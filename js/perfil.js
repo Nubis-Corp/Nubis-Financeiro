@@ -199,19 +199,73 @@ function carregarSecao(secao) {
         case 'ajuda':
             mainContent.innerHTML = `
             <div class="content-inner">
+                
                 <section class="section-block">
                     <h2>Perguntas frequentes</h2>
+                    
                     <div class="faq-list">
-                        <details class="faq-item">
-                            <summary>Como adicionar gastos?<span class="faq-icon"></span></summary>
-                            <p>Para adicionar gastos, vá até a aba "Geral" ou "Simulador".</p>
+                        <details class="faq-item" name="faq">
+                            <summary>
+                                Como adicionar gastos?
+                                <span class="faq-icon"></span>
+                            </summary>
+                            <p>Para adicionar gastos, vá até a aba "Geral" ou "Simulador" e clique no botão de nova transação.</p>
                         </details>
-                        <details class="faq-item">
-                            <summary>Como funciona o simulador?<span class="faq-icon"></span></summary>
-                            <p>O simulador permite prever seus saldos futuros.</p>
+
+                        <details class="faq-item" name="faq">
+                            <summary>
+                                Como adicionar gastos?
+                                <span class="faq-icon"></span>
+                            </summary>
+                            <p>Conteúdo de exemplo para a segunda pergunta.</p>
+                        </details>
+
+                        <details class="faq-item" name="faq">
+                            <summary>
+                                Como funciona o simulador?
+                                <span class="faq-icon"></span>
+                            </summary>
+                            <p>O simulador permite prever seus saldos futuros com base nas suas rendas e despesas fixas.</p>
                         </details>
                     </div>
                 </section>
+
+                <hr class="divider">
+
+                <section class="section-block">
+                    <h2>Guia rápido</h2>
+                    
+                    <div class="cards-grid">
+                        <div class="card">
+                            <h3>Como organizar suas finanças no Nubis</h3>
+                            <ol>
+                                <li>Adicione seu salário</li>
+                                <li>Cadastre suas contas fixas</li>
+                                <li>Registre seus gastos</li>
+                                <li>Crie metas financeiras</li>
+                            </ol>
+                        </div>
+
+                        <div class="card">
+                            <h3>Regra 50-30-20</h3>
+                            <p class="rule-text">50% necessidades<br>30% lazer<br>20% poupança</p>
+                            <p class="obs">Você também pode usar outros valores (%)</p>
+                        </div>
+
+                        <div class="card">
+                            <h3>O que é saldo disponível?</h3>
+                            <p>Saldo disponível é o dinheiro que resta após pagar suas contas e registrar seus gastos.</p>
+                        </div>
+
+                        <div class="card">
+                            <h3>Exemplo 4</h3>
+                            <p class="placeholder-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="divider">
+
             </div>`;
             break;
 
