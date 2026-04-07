@@ -158,3 +158,91 @@ section {
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
+
+
+/* ===================== */
+/* RESPONSIVO MOBILE */
+/* ===================== */
+
+@media (max-width: 768px) {
+
+    .login-pagina {
+        flex-direction: column;
+        height: auto;
+    }
+
+    section {
+        width: 100%;
+        height: auto;
+    }
+
+    /* HERO (parte da esquerda vira topo) */
+    .login-hero {
+        padding: 2rem;
+        text-align: center;
+        align-items: center;
+    }
+
+    .login-logo {
+        max-width: 120px;
+    }
+
+    .login-titulo {
+        font-size: 1.5rem;
+    }
+
+    .login-texto {
+        font-size: 1rem;
+    }
+
+    .login-conteudo {
+        padding: 1rem 0;
+    }
+
+    /* ESCONDE DECORAÇÃO EXCESSIVA */
+    .login-estrelas {
+        display: none;
+    }
+
+    /* PAINEL */
+    .login-painel {
+        padding: 2rem;
+    }
+
+    .painel-header {
+        justify-content: center;
+    }
+
+    .voltar-botao {
+        position: absolute;
+        left: 20px;
+    }
+
+    /* FORM */
+    .login-form {
+        gap: 1.2rem;
+    }
+
+    .form-titulo {
+        font-size: 1.3rem;
+    }
+
+    .form-subtitulo {
+        font-size: 0.8rem;
+    }
+
+    .form-campo input {
+        padding: 0.9rem;
+        font-size: 0.9rem;
+    }
+
+    .login-botao {
+        font-size: 1rem;
+        padding: 0.9rem;
+    }
+
+    .cadastrar-texto {
+        font-size: 0.8rem;
+    }
+
+}

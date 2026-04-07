@@ -325,30 +325,53 @@ body {
 
 
 @media (max-width: 768px) {
-
-    .resumo-financeiro {
-        grid-template-columns: 1fr;
+    
+    /* layout geral */
+    body {
+        padding: 10px;
     }
+
+    /* NAVBAR */
+    .navbar,
+    .barra-navegacao {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu,
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    /* CONTEÚDO */
+    .container,
+    .dashboard,
+    .metas-main {
+        padding: 10px;
+    }
+
+    /* CARDS */
+    .resumo-financeiro,
+    .metas-resumo,
+    .grid-gastos-principais,
     .analise-financeira {
-        grid-template-columns: 1fr; 
-    }
-    .grid-gastos-principais {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
     }
 
+    /* GRID */
     .grid-categorias {
         grid-template-columns: 1fr 1fr;
     }
 
+    /* FOOTER */
+    .footer-container,
     .dashboard-footer-container {
         flex-direction: column;
         gap: 20px;
+        text-align: center;
     }
-}
 
-
-/* ...existing code... */
-
-i {
-    display: none !important;
 }
