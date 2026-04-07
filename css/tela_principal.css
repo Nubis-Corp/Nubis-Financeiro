@@ -559,3 +559,171 @@ body {
 .card-header button {
     color: #28AE8F;
 }
+
+
+/* ===================== */
+/* RESPONSIVO TABLET */
+/* ===================== */
+@media (max-width: 1024px) {
+
+    .dashboard {
+        padding: 1.5rem;
+    }
+
+    .resumo-financeiro {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .card-resumo {
+        border-right: none;
+        border-bottom: 1px solid #D2D2D2;
+        padding-bottom: 1rem;
+    }
+
+    .resumo-financeiro div:nth-child(2){
+        border-left: none;
+    }
+
+    .graficos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .barras {
+        width: 100%;
+    }
+
+    .rosca {
+        width: 300px;
+    }
+}
+
+
+/* ===================== */
+/* RESPONSIVO MOBILE */
+/* ===================== */
+@media (max-width: 768px) {
+
+    .dashboard {
+        padding: 1rem;
+    }
+
+    /* RESUMO */
+    .resumo-header h1 {
+        font-size: 20px;
+    }
+
+    .resumo-header p {
+        font-size: 12px;
+    }
+
+    .resumo-financeiro {
+        padding: 1.5rem;
+    }
+
+    .card-resumo {
+        width: 100%;
+        padding: 0;
+    }
+
+    /* GASTOS */
+    .grid-gastos-principais {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-categorias {
+        grid-template-columns: 1fr;
+    }
+
+    .card-gasto {
+        padding: 1.5rem;
+    }
+
+    /* BOTÕES */
+    .btn-adicionar {
+        font-size: 12px;
+    }
+
+    /* CARTÕES */
+    .cartoes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-cartao {
+        padding: 1rem;
+    }
+
+    /* GRÁFICOS */
+    .graficos {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .card-grafico {
+        padding: 2rem 1rem;
+    }
+
+    .rosca {
+        width: 250px;
+    }
+
+    .barras {
+        width: 100%;
+    }
+
+    #grafico-categorias {
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    /* TEXTO */
+    .card-grafico h3 {
+        font-size: 16px;
+    }
+
+    .legenda-grafico li {
+        font-size: 12px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .dashboard {
+        padding: 0.8rem;
+    }
+
+    .resumo-header h1 {
+        font-size: 18px;
+    }
+
+    .card-gasto {
+        padding: 1rem;
+    }
+
+    .btn-adicionar {
+        font-size: 11px;
+    }
+
+    .btn-adicionar i {
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+    }
+
+    .card-grafico {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .rosca {
+        width: 200px;
+    }
+
+    #grafico-categorias {
+        max-width: 180px;
+        max-height: 180px;
+    }
+
+}

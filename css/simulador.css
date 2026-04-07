@@ -478,8 +478,7 @@ outline: none;
     background: transparent;
     padding-left: 0;
 }
-/* ============================= */
-/* GRID OUTRAS TAXAS */
+
 
 .grupo-outras-taxas {
     display: grid;
@@ -495,7 +494,7 @@ outline: none;
     border: 1px solid #28AE8F;
 }
 
-/* inputs mais limpos */
+
 .grupo-outras-taxas .input-texto {
     border: none;
     background: transparent;
@@ -505,4 +504,95 @@ outline: none;
     width: 100%;
     display: flex;
     flex-direction: column;
+}
+
+@media (max-width: 768px) {
+
+
+    body {
+        padding: 10px;
+    }
+
+    .simulacao-investimento,
+    .opcoes-investimento,
+    .tabela-calculo {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+
+    .titulo-secao {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+
+    .grupo-investimento {
+        grid-template-columns: 1fr;
+    }
+
+
+    .grupo-taxa-selic {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .grupo-outras-taxas {
+        grid-template-columns: 1fr;
+    }
+
+
+    .grupo-input {
+        padding: 0.8rem;
+    }
+
+    .input-texto,
+    .input-numero,
+    .selecao-periodo,
+    .selecao-cdi {
+        font-size: 0.9rem;
+    }
+
+
+    .controle-periodo,
+    .controle-stepper,
+    .controle-selecao {
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .botao-aumentar,
+    .botao-diminuir {
+        width: 28px;
+        height: 28px;
+    }
+
+
+    .botao-simular {
+        font-size: 1rem;
+        padding: 0.9rem;
+    }
+
+
+    .lista-investimentos {
+        grid-template-columns: 1fr;
+    }
+
+
+    .resumo-investimentos {
+        flex-direction: column;
+    }
+
+
+    .tabela-investimentos {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+
+    .cartao-investimento {
+        padding: 10px;
+    }
+
 }

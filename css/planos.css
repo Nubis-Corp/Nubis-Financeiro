@@ -1,10 +1,10 @@
-/* Header */
+
 
 .nav-menu li:nth-child(2) a {
     color: #28AE8F;
 }
 
-/* Hero */
+
 
 .hero-texto {
     display: flex;
@@ -346,17 +346,110 @@
     cursor: pointer;
 }
 
+
+
+
 @media (max-width: 768px) {
-    .depoimentos-grid {
+
+
+    .navbar {
         flex-direction: column;
-        align-items: center;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .nav-menu a {
+        font-size: 13px;
+    }
+
+    .logo img {
+        height: 35px;
+    }
+
+
+    .secao-planos {
+        padding: 50px 20px;
+    }
+
+    .titulo-planos {
+        font-size: 1.8rem;
+    }
+
+    .subtitulo-planos {
+        font-size: 0.95rem;
+    }
+
+    .cartao-plano {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .preco-plano {
+        font-size: 2rem;
+    }
+
+
+    .conteudo-flex {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .texto-bloco h2 {
+        font-size: 1.5rem;
+    }
+
+    .img-figma {
+        height: 200px;
+    }
+
+
+    .depoimentos {
+        padding: 40px 20px;
+    }
+
+    .card-depoimento {
+        width: 100%;
+    }
+
+ 
+    .faq {
+        padding: 40px 20px;
     }
 
     .faq-container {
         flex-direction: column;
+        gap: 20px;
+    }
+
+    .faq-perguntas {
+        width: 100%;
+    }
+
+    .pergunta {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+
+    .footer {
+        padding: 30px 20px;
     }
 
     .footer-grid {
         flex-direction: column;
+        gap: 20px;
+        text-align: center;
     }
+
+    .footer-logo img {
+        width: 80px;
+    }
+
 }

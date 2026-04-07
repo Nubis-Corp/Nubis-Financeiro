@@ -320,16 +320,93 @@
 }
 
 
+/* ===================== */
+/* MOBILE (RESPONSIVO) */
+/* ===================== */
+
 @media (max-width: 768px) {
 
-    .metas-resumo {
+    /* ===== HEADER ===== */
+    .navbar {
         flex-direction: column;
+        gap: 10px;
     }
 
-    .meta-card,
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .logo img {
+        height: 35px;
+    }
+
+    /* ===== MAIN ===== */
+    .metas-main {
+        padding: 20px;
+    }
+
+    /* ===== RESUMO ===== */
+    .metas-resumo {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .resumo-card {
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+    }
+
+    .resumo-card:last-child {
+        border-bottom: none;
+    }
+
+    /* ===== CARDS ===== */
+    .meta-card {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+
     .meta-adicionar {
         width: 100%;
-        margin-bottom: 20px;
+        height: 200px;
+    }
+
+    /* ===== TEXTOS ===== */
+    .secao-titulo {
+        font-size: 18px;
+    }
+
+    .meta-titulo {
+        font-size: 15px;
+    }
+
+    .meta-info {
+        font-size: 12px;
+    }
+
+    /* ===== BOTÕES ===== */
+    .btn-adicionar-valor {
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+
+    .btn-opcoes {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* ===== FOOTER ===== */
+    .dashboard-footer-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .dashboard-footer-coluna {
+        width: 100%;
     }
 
 }

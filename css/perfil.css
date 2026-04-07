@@ -604,3 +604,81 @@ form .excluir-conta {
 .privacidade-e-seguranca a {
     color: #888888;
 }
+
+
+
+
+@media (max-width: 768px) {
+
+    /* HEADER */
+    .barra-navegacao {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .imagem-logo {
+        height: 35px;
+    }
+
+    /* LAYOUT */
+    .pagina-configuracoes {
+        flex-direction: column;
+        height: auto;
+    }
+
+    /* MENU LATERAL vira horizontal */
+    .menu-lateral {
+        width: 100%;
+        padding: 15px;
+        overflow-x: auto;
+    }
+
+    .lista-menu-lateral {
+        display: flex;
+        gap: 10px;
+    }
+
+    .item-menu-lateral {
+        margin: 0;
+    }
+
+    .botao-menu-lateral {
+        white-space: nowrap;
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    /* CONTEÚDO */
+    .conteudo-configuracoes {
+        padding: 20px;
+    }
+
+    .conteudo-dinamico {
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    /* FOTO PERFIL */
+    .perfil-foto img {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* INPUTS */
+    .input {
+        font-size: 14px;
+    }
+
+    /* TÍTULO */
+    .titulo-pagina {
+        font-size: 18px;
+        text-align: center;
+    }
+
+}

@@ -1,6 +1,4 @@
-/* ===============================
-   Fundo escuro do popup
-=============================== */
+
 .popup {
     position: fixed;
     top: 0;
@@ -19,9 +17,7 @@
     opacity: 1;
 }
 
-/* ===============================
-   Caixa do popup
-=============================== */
+
 .popup-caixa {
     background: #fff;
     border-radius: 10px;
@@ -29,7 +25,7 @@
     max-width: 420px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.3);
     overflow: hidden;
-    max-height: 90vh;       /* altura máxima = 90% da viewport */
+    max-height: 90vh;       
     overflow-y: auto; 
     display: flex;
     flex-direction: column;
@@ -41,9 +37,7 @@
     to { transform: scale(1); opacity: 1; }
 }
 
-/* ===============================
-   Header do popup
-=============================== */
+
 .popup-header {
     padding: 1rem 1rem;
     display: flex;
@@ -72,9 +66,7 @@
     color: #ff4d4d;
 }
 
-/* ===============================
-   Conteúdo do popup / Formulário
-=============================== */
+
 .popup-conteudo {
     padding: 2rem;
     display: flex;
@@ -86,7 +78,7 @@
 }
 
 
-/* Labels */
+
 .popup-conteudo label {
     font-weight: 500;
     margin-bottom: 0.2rem;
@@ -113,7 +105,7 @@
     box-shadow: 0 0 4px rgba(0,123,255,0.3);
 }
 
-/* Checkbox estilizado */
+
 .popup-conteudo input[type="checkbox"] {
     margin-right: 6px;
     transform: scale(1.1);
@@ -121,7 +113,7 @@
     margin-bottom: 1rem;
 }
 
-/* Botão de submit */
+
 .popup-conteudo button {
     padding: 8px 12px;
     border: none;
@@ -141,11 +133,54 @@
     transform: translateY(-1px);
 }
 
-/* ===============================
-   Responsividade
-=============================== */
-@media (max-width: 500px) {
-    .popup-caixa {
-        width: 95%;
+
+@media (max-width: 768px) {
+    
+
+    body {
+        padding: 10px;
     }
+
+
+    .navbar,
+    .barra-navegacao {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu,
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+
+    .container,
+    .dashboard,
+    .metas-main {
+        padding: 10px;
+    }
+
+    .resumo-financeiro,
+    .metas-resumo,
+    .grid-gastos-principais,
+    .analise-financeira {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .grid-categorias {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .footer-container,
+    .dashboard-footer-container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
 }
